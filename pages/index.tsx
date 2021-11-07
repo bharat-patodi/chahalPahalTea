@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-
+        <h1>Chahal Pahal Tea</h1>
       </main>
 
       <footer className={styles.footer}>
