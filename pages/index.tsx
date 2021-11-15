@@ -12,10 +12,27 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+        <header>
+        <nav>
+          <ul>
+            <li>Logo</li>
+            <li>Search Bar</li>
+            <li>Login</li>
+            <li>Cart</li>
+          </ul>
+        </nav>
+        </header>
       <main className={styles.main}>
-        <h1>Chahal Pahal Tea</h1>
-      </main>
-
+          <section>Carousel</section>
+          <section>
+            <div>Top Selling Products</div>
+            <div>Tea Subscription</div>
+            <div>Sign In</div>
+            <div>Shop By Category</div>
+          </section>
+          <section className="todays-deals">Carousel for all daily deals</section>
+          <section className="all-products">All Products</section>
+        </main>
       <footer className={styles.footer}>
         Copyright and trademark owned by Chahal Pahal Tea
       </footer>
