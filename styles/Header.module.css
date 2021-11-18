@@ -1,0 +1,9 @@
+.header nav ul{
+    align-items: center;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eaeaea;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}

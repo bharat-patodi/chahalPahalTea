@@ -1,5 +1,7 @@
+import styles from '../styles/Footer.module.css';
+
 const Footer = () => (
-  <footer>
+  <footer className={styles.footer}>
     Copyright and trademark owned by Chahal Pahal Tea
   </footer>
 );
