@@ -4,10 +4,11 @@
 }
 
 .popularActions {
+  border: 5px solid lightslategray;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  border: 5px solid lightslategray;
   min-height: 20vh;
 }
 
@@ -19,4 +20,15 @@
 .allProducts {
   border: 5px solid hotpink;
   min-height: 20vh;
+}
+
+.allProducts > h2 {
+  text-align: center;
+}
+
+.allProductCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

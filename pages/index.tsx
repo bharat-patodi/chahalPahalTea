@@ -19,15 +19,23 @@ const Home: NextPage = () => {
         <main>
           <section className={styles.carousel}>Carousel</section>
           <section className={styles.popularActions}>
-            <Card name="Top Selling Products" />
             <Card name="Tea Subscription" />
+            <Card name="Top Selling Products" />
             <Card name="Sign In" />
             <Card name="Shop By Category" />
           </section>
           <section className={styles.dailyDeals}>
             Carousel for all daily deals
           </section>
-          <section className={styles.allProducts}>All Products</section>
+          <section className={styles.allProducts}>
+            <h2>All Products</h2>
+            <div className={styles.allProductCards}>
+              <Card name="Tea 1"/>
+              <Card name="Tea 2"/>
+              <Card name="Tea 3"/>
+              <Card name="Tea 4"/>
+            </div>
+          </section>
         </main>
       </div>
       <Footer />
