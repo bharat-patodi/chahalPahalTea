@@ -3,8 +3,8 @@
 .carousel {
   border: 5px solid salmon;
   min-height: 20vh;
-}
 
+}
 .popularActions {
   border: 5px solid lightslategray;
   display: flex;
@@ -35,4 +35,27 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-around;
+}
+
+.mainProduct {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.strikeThrough {
+  text-decoration: line-through;
+  /* text-decoration-style: wavy; */
+  text-decoration-thickness: 2px;
+  text-decoration-color: red;
+}
+
+.productDetails {
+  /* Why are styles not working */
+  list-style-type: disc;
+}
+
+.productDetails > li {
+  margin-left: 1rem;
 }

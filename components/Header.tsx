@@ -5,9 +5,13 @@ const Header = () => (
     <nav>
       <ul>
         <li>Logo</li>
-        <li>Search Bar</li>
+        <li>Shop</li>
+        <li>Stories</li>
+        <li>About</li>
+      </ul>
+      <ul>
+        <li>CartIcon</li>
         <li>Login</li>
-        <li>Cart</li>
       </ul>
     </nav>
   </header>

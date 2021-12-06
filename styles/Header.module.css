@@ -1,3 +1,8 @@
+.header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header nav ul{
     align-items: center;
     background-color: #fafafa;
@@ -6,4 +11,5 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    gap: 1rem;
 }
