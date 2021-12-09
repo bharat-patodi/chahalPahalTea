@@ -11,7 +11,7 @@ const Login = () => {
           <h1>Login</h1>
           <p>This is the login page</p>
           <p>
-            Once you're logged in, you will be routed back to the <Link href="/"><a>Home Page</a></Link>.
+            Once you&apos;re logged in, you will be routed back to the <Link href="/"><a>Home Page</a></Link>.
           </p>
           <p>If this is your first time here, this page should instead be the signup page.</p>
         </div>
