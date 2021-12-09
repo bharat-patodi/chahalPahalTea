@@ -34,10 +34,10 @@ const Home: NextPage = () => {
                   </select>
                   <label htmlFor="quantity">Quantity:</label>
                   <select name="quantity" id="quantity">
-                    <option value="100gm">100gm</option>
-                    <option value="250g">250gm</option>
-                    <option value="500gm">500gm</option>
-                    <option value="1kg">1kg</option>
+                    <option value="100gm">1</option>
+                    <option value="250g">2</option>
+                    <option value="500gm">3</option>
+                    <option value="1kg">4</option>
                   </select>
                 </form>
                 <p>

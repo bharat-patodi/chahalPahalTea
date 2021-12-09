@@ -237,6 +237,10 @@ body {
   font-family: var(--text-font);
 }
 
+main {
+  min-height: 80vh;
+}
+
 h1 {
   font-size: 3em;
 }
