@@ -1,65 +1,73 @@
 
-.popularActions {
-  /* border: 5px solid lightslategray; */
+/* .popularActions {
+  border: 5px solid lightslategray;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-around;
   min-height: 20vh;
-}
+} */
 
-.dailyDeals {
-  /* border: 5px solid saddlebrown; */
+/* .dailyDeals {
+  border: 5px solid saddlebrown;
   min-height: 20vh;
-}
+} */
 
-.allProducts {
-  /* border: 5px solid hotpink; */
+/* .allProducts {
+  border: 5px solid hotpink;
   min-height: 20vh;
+} */
+
+/* .allProductCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+} */
+
+.mainProduct {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  /* border: 3px solid green; */
 }
 
-.allProducts > h2 {
+.mainProduct > * {
+  /* Study All this hackery */
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.mainProduct picture {
   text-align: center;
 }
 
-.allProductCards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-around;
-}
-
-.mainProduct {
-  display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mainProduct p {
-  font-size: 1.25rem;
-  /* font-weight: 700; */
-}
-
 .mainProduct img {
-  /* width: 100%; */
-  min-width: 400px;
-}
-
-.strikeThrough {
-  text-decoration: line-through;
-  text-decoration-color: red;
-  text-decoration-thickness: 2px;
+  /* display: block; */
+  /* border: 3px solid red; */
+  vertical-align: bottom;
 }
 
 .productDetails {
+  /* border: 3px solid blue; */
+  /* max-width: 300px; */
+}
+
+/* .strikeThrough {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+} */
+
+/* .productDetails {
   list-style-type: disc;
 }
 
 .productDetails > li {
   margin-left: 1rem;
-}
+} */

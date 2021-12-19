@@ -238,13 +238,11 @@ body {
 }
 
 main {
-  min-height: 80vh;
+  /* min-height: 80vh; */
 }
 
 h1 {
   font-size: 5rem;
-  text-align: center;
-  /* line-height: 2; */
   margin: 2rem;
   font-weight: 900;
 }
@@ -293,6 +291,11 @@ Media Queries
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .mainProduct {
+    justify-content: center;
+    flex-grow: 0;
+    align-items: center;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
