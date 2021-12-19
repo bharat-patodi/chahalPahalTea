@@ -1,10 +1,6 @@
-.carousel {
-  border: 5px solid salmon;
-  min-height: 20vh;
 
-}
 .popularActions {
-  border: 5px solid lightslategray;
+  /* border: 5px solid lightslategray; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,12 +10,12 @@
 }
 
 .dailyDeals {
-  border: 5px solid saddlebrown;
+  /* border: 5px solid saddlebrown; */
   min-height: 20vh;
 }
 
 .allProducts {
-  border: 5px solid hotpink;
+  /* border: 5px solid hotpink; */
   min-height: 20vh;
 }
 
@@ -38,8 +34,20 @@
 .mainProduct {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainProduct p {
+  font-size: 1.25rem;
+  /* font-weight: 700; */
+}
+
+.mainProduct img {
+  /* width: 100%; */
+  min-width: 400px;
 }
 
 .strikeThrough {
