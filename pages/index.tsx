@@ -25,15 +25,14 @@ const Home: NextPage = () => {
             <div className={styles.productDetails}>
               <p>
                 चहल पहल चाय पसंद करने के लिए आपका धन्यवाद। चाय केवल एक पेय नहीं
-                है। चाय हर सुबह की ताज़गी का एक ज़रिया है।
-                  और हमारे दिन का एक
-                अभिन्न हिस्सा है। चहल पहल चाय में हैं चुनी हुई पत्तियाँ, जो अपने
-                में संजोये हुए हैं आपकी पसंदीदा ख़ुशबू और ज़ायका। चहल पहल चाय आप
-                तक लाता है जैन परिवार, इसीलिए आप हमारी सच्चाई और चाय की गुणवत्ता
-                पर पूरा विश्वास कर सकते हैं। अपने आप को कुछ क्षणों का आराम दें,
-                और चाय का आनंद लें।
+                है। चाय हर सुबह की ताज़गी का एक ज़रिया है। और हमारे दिन का एक
+                अभिन्न हिस्सा है। चहल पहल चाय में हैं चुनी हुई
+                पत्तियाँ, जो अपने में संजोये हुए हैं आपकी पसंदीदा ख़ुशबू और
+                ज़ायका। चहल पहल चाय आप तक लाता है जैन परिवार, इसीलिए आप हमारी
+                सच्चाई और चाय की गुणवत्ता पर पूरा विश्वास कर सकते हैं। अपने आप
+                को कुछ क्षणों का आराम दें, और चाय का आनंद लें।
               </p>
-                {/* <p>
+              {/* <p>
                     M.R.P.: <span className={styles.strikeThrough}>₹250</span>
                   </p>
                   <p>Price: ₹250</p>
@@ -71,9 +70,49 @@ const Home: NextPage = () => {
             <Card name="Sign In" />
             <Card name="Shop By Category" />
           </section> */}
-        {/* <section className={styles.dailyDeals}>
-            <h2>Testimonials</h2>
-          </section> */}
+        <section className={styles.testimonials}>
+          <h2>Testimonials</h2>
+          <div className={styles.testimonialCards}>
+            <div className={styles.testimonialCard}>
+              <h3>Chahat Shah</h3>
+              <p>Nice colour and smell ☕</p>
+            </div>
+            <div className={styles.testimonialCard}>
+              <h3>Real Graphics</h3>
+              <p>Awesome test</p>
+            </div>
+            <div className={styles.testimonialCard}>
+              <h3>Prince Singhai</h3>
+              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+            </div>
+            <div className={styles.testimonialCard}>
+              <h3>Aditi Jain</h3>
+              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+            </div>
+            <div className={styles.testimonialCard}>
+              <h3>Nikhil S Kumar</h3>
+              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+            </div>
+            <div className={styles.testimonialCard}>
+              <h3>Miti Shah</h3>
+              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+            </div>
+            <div className={styles.testimonialCard}>
+              <h3>Abhenav Jain</h3>
+              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+            </div>
+          </div>
+        </section>
+        <section className={styles.videoTestimonial}>
+          <h2>Video Testimonials</h2>
+          <iframe
+            src="https://www.youtube.com/embed/PX6Edt1zrkk"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </section>
       </main>
       <Footer />
     </div>

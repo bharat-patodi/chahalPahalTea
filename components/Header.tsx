@@ -5,14 +5,39 @@ const Header = () => (
   <header className={styles.header}>
     <nav>
       <ul>
-        <li><Link href="/"><a>Logo</a></Link></li>
-        <li><Link href="/shop"><a>Shop</a></Link></li>
-        <li><Link href="/testimonials"><a>Stories</a></Link></li>
-        <li><Link href="/about"><a>About</a></Link></li>
+        <li>
+          <Link href="/">
+            <a>Logo</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/shop">
+            <a>Shop</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/testimonials">
+            <a>Stories</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </li>
       </ul>
+      <p>Call us at: +91 90990-90191</p>
       <ul>
-        <li><Link href="/cart"><a>CartIcon</a></Link></li>
-        <li><Link href="/login"><a>Login</a></Link></li>
+        <li>
+          <Link href="/cart">
+            <a>CartIcon</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/login">
+            <a>Login</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   </header>

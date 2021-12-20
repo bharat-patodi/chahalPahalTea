@@ -203,6 +203,8 @@ Variables
   --dark-mode-blue: #388bfd;
   /* Color Dark Theme End */
 
+  --animesh-choice-black: #2b303a;
+
   /* Colors End */
 
   /* Font Values Begin */
@@ -235,10 +237,11 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   font-family: var(--text-font);
+  color: var(--animesh-choice-black);
 }
 
 main {
-  /* min-height: 80vh; */
+  min-height: 80vh;
 }
 
 h1 {
@@ -300,6 +303,13 @@ Media Queries
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+.videoTestimonial iframe {
+  max-width: 560px;
+  max-height: 315px;
+  width: 560px;
+  height: 315px;
+}
 }
 
 /* Large devices (large desktops, 1200px and up) */

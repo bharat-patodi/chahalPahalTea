@@ -1,11 +1,12 @@
 .header nav {
     display: flex;
     justify-content: space-between;
+    background-color: var(--animesh-choice-black);
+    color: white;
 }
 
 .header nav ul{
     align-items: center;
-    background-color: #fafafa;
     border-bottom: 1px solid #eaeaea;
     flex-direction: row;
     display: flex;

@@ -1,4 +1,6 @@
 .footer {
     text-align: center;
     padding: 1rem;
+        background-color: var(--animesh-choice-black);
+    color: white;
 }
