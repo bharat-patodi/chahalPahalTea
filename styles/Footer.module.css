@@ -4,3 +4,21 @@
         background-color: var(--animesh-choice-black);
     color: white;
 }
+
+.footer a {
+    color: white;
+    /* text-decoration: none; */
+}
+
+.footer a:hover {
+    color: var(--lime-green);
+    /* text-decoration: none; */
+}
+
+.footerNav {
+    display: flex;
+    justify-content: space-between;
+    
+    /* background-color: var(--animesh-choice-black);
+    color: white; */
+}

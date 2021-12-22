@@ -16,22 +16,26 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className="container">
-        <section className={styles.allProducts}>
+        <section className={`${styles.homeSection} ${styles.allProducts}`}>
           <h1>चहल पहल चाय</h1>
           <div className={styles.mainProduct}>
             <picture>
               <img src="product-large.png" alt="product-1" />
             </picture>
             <div className={styles.productDetails}>
+              <p>कड़क और ताज़गीभरी चाय।</p>
               <p>
                 चहल पहल चाय पसंद करने के लिए आपका धन्यवाद। चाय केवल एक पेय नहीं
                 है। चाय हर सुबह की ताज़गी का एक ज़रिया है। और हमारे दिन का एक
-                अभिन्न हिस्सा है। चहल पहल चाय में हैं चुनी हुई
-                पत्तियाँ, जो अपने में संजोये हुए हैं आपकी पसंदीदा ख़ुशबू और
-                ज़ायका। चहल पहल चाय आप तक लाता है जैन परिवार, इसीलिए आप हमारी
-                सच्चाई और चाय की गुणवत्ता पर पूरा विश्वास कर सकते हैं। अपने आप
-                को कुछ क्षणों का आराम दें, और चाय का आनंद लें।
+                अभिन्न हिस्सा है।
               </p>
+              <p>
+                चहल पहल चाय में हैं चुनी हुई पत्तियाँ, जो अपने में संजोये हुए
+                हैं आपकी पसंदीदा ख़ुशबू और ज़ायका। चहल पहल चाय आप तक लाता है जैन
+                परिवार, इसीलिए आप हमारी सच्चाई और चाय की गुणवत्ता पर पूरा
+                विश्वास कर सकते हैं।
+              </p>
+              <p>अपने आप को कुछ क्षणों का आराम दें, और चाय का आनंद लें।</p>
               {/* <p>
                     M.R.P.: <span className={styles.strikeThrough}>₹250</span>
                   </p>
@@ -70,7 +74,7 @@ const Home: NextPage = () => {
             <Card name="Sign In" />
             <Card name="Shop By Category" />
           </section> */}
-        <section className={styles.testimonials}>
+        <section className={`${styles.homeSection} ${styles.testimonials}`}>
           <h2>Testimonials</h2>
           <div className={styles.testimonialCards}>
             <div className={styles.testimonialCard}>
@@ -103,13 +107,13 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className={styles.videoTestimonial}>
+        <section className={`${styles.homeSection} ${styles.videoTestimonial}`}>
           <h2>Video Testimonials</h2>
           <iframe
             src="https://www.youtube.com/embed/PX6Edt1zrkk"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </section>

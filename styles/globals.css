@@ -262,11 +262,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
   font-weight: 700;
   text-align: center;
+  margin: 1rem 0;
 }
 
 label,
 input {
   display: block;
+}
+
+br {
+  margin: 0;
+  line-height: 0;
 }
 
 /* ---------------------------------------------------------------
@@ -286,32 +292,3 @@ Modular Classes
 Project Specific Styles
 --------------------------------------------------------------- */
 
-
-
-/* ---------------------------------------------------------------
-Media Queries
---------------------------------------------------------------- */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .mainProduct {
-    justify-content: center;
-    flex-grow: 0;
-    align-items: center;
-  }
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-.videoTestimonial iframe {
-  max-width: 560px;
-  max-height: 315px;
-  width: 560px;
-  height: 315px;
-}
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
