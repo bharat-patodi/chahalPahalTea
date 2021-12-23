@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main>
-        <section className={`${styles.homeSection} ${styles.allProducts}`}>
+        <section className={`${styles.homeSection} ${styles.allProducts} ${styles.hindiText}`}>
           <div className="container">
             <h1>चहल पहल चाय</h1>
             <div className={styles.mainProduct}>

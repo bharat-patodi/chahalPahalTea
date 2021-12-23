@@ -290,6 +290,10 @@ Modular Classes
   margin: 0 auto;
 }
 
+.hindiText {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* ---------------------------------------------------------------
 Project Specific Styles
 --------------------------------------------------------------- */
