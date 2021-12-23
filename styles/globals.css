@@ -203,7 +203,8 @@ Variables
   --dark-mode-blue: #388bfd;
   /* Color Dark Theme End */
 
-  --animesh-choice-black: #2b303a;
+  /* --animesh-choice-black: #2b303a; */
+  --animesh-choice-black: #000;
 
   /* Colors End */
 

@@ -15,56 +15,58 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="container">
+      <main>
         <section className={`${styles.homeSection} ${styles.allProducts}`}>
-          <h1>चहल पहल चाय</h1>
-          <div className={styles.mainProduct}>
-            <picture>
-              <img src="product-large.png" alt="product-1" />
-            </picture>
-            <div className={styles.productDetails}>
-              <p>कड़क और ताज़गीभरी चाय।</p>
-              <p>
-                चहल पहल चाय पसंद करने के लिए आपका धन्यवाद। चाय केवल एक पेय नहीं
-                है। चाय हर सुबह की ताज़गी का एक ज़रिया है। और हमारे दिन का एक
-                अभिन्न हिस्सा है।
-              </p>
-              <p>
-                चहल पहल चाय में हैं चुनी हुई पत्तियाँ, जो अपने में संजोये हुए
-                हैं आपकी पसंदीदा ख़ुशबू और ज़ायका। चहल पहल चाय आप तक लाता है जैन
-                परिवार, इसीलिए आप हमारी सच्चाई और चाय की गुणवत्ता पर पूरा
-                विश्वास कर सकते हैं।
-              </p>
-              <p>अपने आप को कुछ क्षणों का आराम दें, और चाय का आनंद लें।</p>
-              {/* <p>
+          <div className="container">
+            <h1>चहल पहल चाय</h1>
+            <div className={styles.mainProduct}>
+              <picture>
+                <img src="product-large.png" alt="product-1" />
+              </picture>
+              <div className={styles.productDetails}>
+                <p>कड़क और ताज़गीभरी चाय।</p>
+                <p>
+                  चहल पहल चाय पसंद करने के लिए आपका धन्यवाद। चाय केवल एक पेय
+                  नहीं है। चाय हर सुबह की ताज़गी का एक ज़रिया है। और हमारे दिन का
+                  एक अभिन्न हिस्सा है।
+                </p>
+                <p>
+                  चहल पहल चाय में हैं चुनी हुई पत्तियाँ, जो अपने में संजोये हुए
+                  हैं आपकी पसंदीदा ख़ुशबू और ज़ायका। चहल पहल चाय आप तक लाता है
+                  जैन परिवार, इसीलिए आप हमारी सच्चाई और चाय की गुणवत्ता पर पूरा
+                  विश्वास कर सकते हैं।
+                </p>
+                <p>अपने आप को कुछ क्षणों का आराम दें, और चाय का आनंद लें।</p>
+                {/* <p>
                     M.R.P.: <span className={styles.strikeThrough}>₹250</span>
-                  </p>
-                  <p>Price: ₹250</p>
-                  <p>You Save: ₹250 (45%) Inclusive of all taxes</p>
-                  <ul className={styles.productDetails}>
+                    </p>
+                    <p>Price: ₹250</p>
+                    <p>You Save: ₹250 (45%) Inclusive of all taxes</p>
+                    <ul className={styles.productDetails}>
                     About the product
                     <li>Detail 1</li>
                     <li>Detail 2</li>
                     <li>Detail 3</li>
                     <li>Detail 4</li>
-                  </ul>
-                  <form action="">
+                    </ul>
+                    <form action="">
                     <label htmlFor="weight">Weight:</label>
                     <select name="weight" id="weight">
-                      <option value="100gm">100gm</option>
-                      <option value="250g">250gm</option>
-                      <option value="500gm">500gm</option>
-                      <option value="1kg">1kg</option>
+                    <option value="100gm">100gm</option>
+                    <option value="250g">250gm</option>
+                    <option value="500gm">500gm</option>
+                    <option value="1kg">1kg</option>
                     </select>
                     <label htmlFor="quantity">Quantity:</label>
                     <select name="quantity" id="quantity">
-                      <option value="100gm">1</option>
-                      <option value="250g">2</option>
-                      <option value="500gm">3</option>
-                      <option value="1kg">4</option>
+                    <option value="100gm">1</option>
+                    <option value="250g">2</option>
+                    <option value="500gm">3</option>
+                    <option value="1kg">4</option>
                     </select>
                     <input type="submit" value="खरीदें"></input>
                   </form> */}
+              </div>
             </div>
           </div>
         </section>
@@ -75,47 +77,57 @@ const Home: NextPage = () => {
             <Card name="Shop By Category" />
           </section> */}
         <section className={`${styles.homeSection} ${styles.testimonials}`}>
-          <h2>Testimonials</h2>
-          <div className={styles.testimonialCards}>
-            <div className={styles.testimonialCard}>
-              <h3>Chahat Shah</h3>
-              <p>Nice colour and smell ☕</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <h3>Real Graphics</h3>
-              <p>Awesome test</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <h3>Prince Singhai</h3>
-              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <h3>Aditi Jain</h3>
-              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <h3>Nikhil S Kumar</h3>
-              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <h3>Miti Shah</h3>
-              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <h3>Abhenav Jain</h3>
-              <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+          <div className="container">
+            <h2>Testimonials</h2>
+            <div className={styles.testimonialCards}>
+              <div className={styles.testimonialCard}>
+                <h3>Chahat Shah</h3>
+                <p>Nice colour and smell ☕</p>
+              </div>
+              <div className={styles.testimonialCard}>
+                <h3>Real Graphics</h3>
+                <p>Awesome test</p>
+              </div>
+              <div className={styles.testimonialCard}>
+                <h3>Prince Singhai</h3>
+                <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+              </div>
+              <div className={styles.testimonialCard}>
+                <h3>Aditi Jain</h3>
+                <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+              </div>
+              <div className={styles.testimonialCard}>
+                <h3>Nikhil S Kumar</h3>
+                <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+              </div>
+              <div className={styles.testimonialCard}>
+                <h3>Miti Shah</h3>
+                <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+              </div>
+              <div className={styles.testimonialCard}>
+                <h3>Abhenav Jain</h3>
+                <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+              </div>
             </div>
           </div>
         </section>
-        <section className={`${styles.homeSection} ${styles.videoTestimonial}`}>
-          <h2>Video Testimonials</h2>
-          <iframe
-            src="https://www.youtube.com/embed/PX6Edt1zrkk"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <section
+          className={`${styles.homeSection} ${styles.videoTestimonialSection}`}
+        >
+          <div className="container">
+            <h2>Video Testimonials</h2>
+            <div className={styles.allVideoTestimonials}>
+              <div className={styles.videoTestimonial}>
+                <iframe
+                  src="https://www.youtube.com/embed/PX6Edt1zrkk"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
