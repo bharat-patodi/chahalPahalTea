@@ -99,10 +99,11 @@
 
 .videoTestimonialSection {
   text-align: center;
-  background-image: url(/sun-tornado-02.svg);
+  background-image: url(/repeating-chevrons.svg);
+  /* background-image: url(/sun-tornado-02.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; */
   background-attachment: fixed;
 }
 .allVideoTestimonials {
