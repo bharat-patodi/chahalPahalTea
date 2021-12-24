@@ -1,3 +1,9 @@
+.header {
+  /* border: 3px solid goldenrod; */
+  position: sticky;
+  top: 0px;
+}
+
 .headerNav {
   display: flex;
   justify-content: space-between;

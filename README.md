@@ -1,8 +1,8 @@
 ## ToDo
 - logo
 - hamburger
-- hindi font for title
 - footer social media
+- hindi font for title
 - title font for all sections
 - make header and footer sticky
 

@@ -1,7 +1,7 @@
 .footer {
     text-align: center;
     padding: 1rem;
-        background-color: var(--animesh-choice-black);
+    background-color: var(--animesh-choice-black);
     color: white;
 }
 
@@ -17,8 +17,24 @@
 
 .footerNav {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: center;
+
     /* background-color: var(--animesh-choice-black);
     color: white; */
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
 }

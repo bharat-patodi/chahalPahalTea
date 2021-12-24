@@ -1,5 +1,7 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const NavLinks = () => (
   <>
@@ -38,7 +40,9 @@ const Header = () => (
       <ul>
         <li>
           <Link href="/cart">
-            <a>CartIcon</a>
+            <a>
+              <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon>
+            </a>
           </Link>
         </li>
         <li>
@@ -77,7 +81,9 @@ const Header = () => (
       <ul>
         <li>
           <Link href="/cart">
-            <a>CartIcon</a>
+            <a>
+              <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon>
+            </a>
           </Link>
         </li>
         <li>

@@ -1,38 +1,55 @@
-import styles from '../styles/Footer.module.css';
-import Link from 'next/link';
+import styles from "../styles/Footer.module.css";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => (
   <footer className={styles.footer}>
-    © Copyright and trademark owned by Chahal Pahal Tea
     <nav className={styles.footerNav}>
-      <Link href="/credits">
-        <a>Credits</a>
-      </Link>
-      <Link href="/contact">
-        <a>Contact Us</a>
-      </Link>
-      <Link href="/contact">
-        <a>Twitter</a>
-      </Link>
-      <Link href="https://www.instagram.com/chahal_pahal_tea/">
-        <a>Instagram</a>
-      </Link>
-      <Link href="https://www.facebook.com/chahalpahaltea/">
-        <a>Facebook</a>
-      </Link>
-      <Link href="https://www.linkedin.com/showcase/chahal-pahal-tea/">
-        <a>LinkedIn</a>
-      </Link>
-      <Link href="/contact">
-        <a>IndiaMart</a>
-      </Link>
-      <Link href="https://www.youtube.com/channel/UCK1caBDPLiFVNqhcvP6DUOA">
-        <a>Youtube</a>
-      </Link>
-      <Link href="#">
-        <a>Mail</a>
-      </Link>
+      <ul className={styles.footerLinks}>
+        <li>
+          <Link href="/credits">
+            <a>Credits</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </li>
+      </ul>
+      <ul className={styles.socialLinks}>
+        <li>
+          <Link href="/contact">
+            <a>
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="https://www.instagram.com/chahal_pahal_tea/">
+            <a>
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="https://www.facebook.com/chahalpahaltea/">
+            <FontAwesomeIcon icon={["fab", "facebook"]} />
+          </Link>
+        </li>
+        <li>
+          <Link href="https://www.linkedin.com/showcase/chahal-pahal-tea/">
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          </Link>
+        </li>
+        <li>
+          <Link href="https://www.youtube.com/channel/UCK1caBDPLiFVNqhcvP6DUOA">
+            <FontAwesomeIcon icon={["fab", "youtube"]} />
+          </Link>
+        </li>
+      </ul>
     </nav>
+    <p>© Copyright and trademark owned by Chahal Pahal Tea</p>
   </footer>
 );
 

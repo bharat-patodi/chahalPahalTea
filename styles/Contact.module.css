@@ -1,0 +1,17 @@
+.contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact h3 {
+    text-align: left;
+}
+
+.contactDetails {
+
+}
+
+.enquiryForm h3 {
+    text-align: left;
+}
