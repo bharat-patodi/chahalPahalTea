@@ -34,17 +34,23 @@ const Footer = () => (
         </li>
         <li>
           <Link href="https://www.facebook.com/chahalpahaltea/">
+            <a>
             <FontAwesomeIcon icon={["fab", "facebook"]} />
+            </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.linkedin.com/showcase/chahal-pahal-tea/">
+            <a>
             <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.youtube.com/channel/UCK1caBDPLiFVNqhcvP6DUOA">
+            <a>
             <FontAwesomeIcon icon={["fab", "youtube"]} />
+            </a>
           </Link>
         </li>
       </ul>

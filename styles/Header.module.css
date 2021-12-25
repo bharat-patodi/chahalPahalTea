@@ -2,6 +2,7 @@
   /* border: 3px solid goldenrod; */
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 
 .headerNav {

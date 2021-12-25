@@ -21,7 +21,9 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main>
-        <section className={`${styles.homeSection} ${styles.allProducts} ${styles.hindiText}`}>
+        <section
+          className={`${styles.homeSection} ${styles.allProducts} ${styles.hindiText}`}
+        >
           <div className="container">
             <h1>चहल पहल चाय</h1>
             <div className={styles.mainProduct}>
@@ -81,7 +83,9 @@ const Home: NextPage = () => {
             <Card name="Sign In" />
             <Card name="Shop By Category" />
           </section> */}
-        <section className={`${styles.homeSection} ${styles.testimonials}`}>
+        <section
+          className={`${styles.homeSection} ${styles.testimonialSection}`}
+        >
           <div className="container">
             <h2>Testimonials</h2>
             <div className={styles.testimonialCards}>
@@ -122,14 +126,17 @@ const Home: NextPage = () => {
           <div className="container">
             <h2>Video Testimonials</h2>
             <div className={styles.allVideoTestimonials}>
-              <div className={styles.videoTestimonial}>
-                <iframe
-                  src="https://www.youtube.com/embed/PX6Edt1zrkk"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+              <div className={styles.extraContainerForIframe}>
+                <div className={styles.videoTestimonial}>
+                  <iframe
+                    className={styles.iframe}
+                    src="https://www.youtube.com/embed/PX6Edt1zrkk"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
