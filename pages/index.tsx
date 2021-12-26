@@ -17,6 +17,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Chahal Pahal Tea</title>
         <meta name="description" content="Chahal Pahal Tea" />
+        <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
