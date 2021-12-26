@@ -6,10 +6,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart, faBars } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(fab, faShoppingCart);
+library.add(fab, faShoppingCart, faBars);
 
 const Home: NextPage = () => {
   return (

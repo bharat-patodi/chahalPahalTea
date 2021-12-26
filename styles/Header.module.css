@@ -6,13 +6,14 @@
 }
 
 .headerNav {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   background-color: var(--animesh-choice-black);
-  color: white;
+  color: white; */
+  /* display: none; */
 }
 
-.headerNav ul {
+.headerNavUl {
   align-items: center;
   flex-direction: row;
   display: flex;
@@ -31,22 +32,48 @@
 }
 
 /* Add a hamburger to the website */
+.navHamburgerIcon {
+  display: flex;
+  /* position: fixed; */
+  justify-content: space-between;
+  /* top: 1rem;
+  right: 3rem; */
+  z-index: 10;
+  background-color: var(--animesh-choice-black);
+  cursor: pointer;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  /* min-width: 10rem; */
+  /* border: 3px solid green; */
+}
+
 .navHamburger {
   /* display: none; */
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10;
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--animesh-choice-black);
-  border-radius: 50%;
-  cursor: pointer;
+  top: 2.48rem;
+  right: 0rem;
+  /* background-color: var; */
+  background-color: rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.navHamburger a {
+  display: block;
+  padding: 1rem 3.5rem;
+}
+
+.navHamburger a:hover {
+  background-color: var(--lime-green);
+  font-weight: 700;
+  color: black;
 }
 
 .navBar {
-    display: none;
+  display: none;
 }
 
 /* ---------------------------------------------------------------
@@ -55,11 +82,20 @@ Media Queries
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .navHamburgerIcon,
   .navHamburger {
     display: none;
   }
+
   .navBar {
-      display: flex;
+    display: flex;
+  }
+
+  .headerNav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--animesh-choice-black);
+    color: white;
   }
 }
 
