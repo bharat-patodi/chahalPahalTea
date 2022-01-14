@@ -245,6 +245,14 @@ main {
   min-height: 80vh;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
 h1 {
   font-size: 5rem;
   margin: 2rem;
@@ -253,18 +261,11 @@ h1 {
 
 h2 {
   font-size: 3rem;
+  margin-bottom: 5rem;
 }
 
 h3 {
   font-size: 1.2em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--title-font);
-  font-weight: 700;
-  text-align: center;
-  margin: 1rem 0;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 label,

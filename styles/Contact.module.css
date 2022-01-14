@@ -3,15 +3,55 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.heading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 2rem 0;
+}
 
 .contact h3 {
-    text-align: left;
+    /* text-align: left; */
 }
 
 .contactDetails {
+    background-color: #FFE533;
+    flex-grow: 1;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.08rem;
+}
+
+.enquiryForm {
+    padding-top: 10rem;
+    background-color: #FFCC00;
+    flex-grow: 1;
+    text-align: center;
 
 }
 
-.enquiryForm h3 {
+.enquiryForm form {
+    display: inline-block;
+    margin: 1rem auto 2rem auto;
     text-align: left;
 }
+
+.enquiryForm form *:not(:last-child):not(:first-child) {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.enquiryForm input[type="submit"] {
+    background-color: var(--lime-green);
+    font-size: 1.08rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* For centering the form, use https://stackoverflow.com/questions/8097744/how-do-i-center-this-form-in-css */

@@ -5,17 +5,16 @@ import styles from "../styles/Contact.module.css";
 const Contact = () => (
   <>
     <Header />
+      <h1 className={styles.heading}>Contact Us</h1>
     <main>
-      <h1>Contact Us</h1>
       <div className={styles.contact}>
         <section className={styles.enquiryForm}>
           <h3>Enquiry Form</h3>
-          <select name="" id="">
-            <option value="customer">customer</option>
-            <option value="distributor">distributor</option>
-          </select>
-
           <form action="post">
+            <select name="" id="">
+              <option value="customer">Customer</option>
+              <option value="distributor">Distributor</option>
+            </select>
             <label>Name</label>
             <input type="text" name="" id="" />
             <label>Email</label>
@@ -25,8 +24,8 @@ const Contact = () => (
             <input type="submit" value="Submit" />
           </form>
         </section>
-        <section className="contactDetails">
-          <p>Phone Number: +91 90990 90191</p>
+        <section className={styles.contactDetails}>
+          <p>Phone: +91 90990 90191</p>
           <p>Email: tejpan.biz@gmail.com</p>
         </section>
       </div>
