@@ -16,9 +16,11 @@ const Contact = () => (
               <option value="distributor">Distributor</option>
             </select>
             <label>Name</label>
-            <input type="text" name="" id="" />
+            <input type="text" name="" id="" placeholder="animesh jain" required/>
             <label>Email</label>
-            <input type="email" name="" id="" />
+            <input type="email" name="" id="" placeholder="animesh@gmail.com" required />
+            <label>Number</label>
+            <input type="tel" name="" id="" placeholder="9099090191" required />
             <label>Message</label>
             <textarea name="" id="" cols={30} rows={10}></textarea>
             <input type="submit" value="Submit" />

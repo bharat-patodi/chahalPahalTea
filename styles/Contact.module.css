@@ -23,6 +23,8 @@
     align-items: center;
     flex-direction: column;
     font-size: 1.08rem;
+    background-image: url('/repeating-chevrons.svg');
+    background-attachment: fixed;
 }
 
 .enquiryForm {
@@ -30,7 +32,8 @@
     background-color: #FFCC00;
     flex-grow: 1;
     text-align: center;
-
+    background-image: url('/repeating-chevrons.svg');
+    background-attachment: fixed;
 }
 
 .enquiryForm form {
@@ -41,7 +44,6 @@
 
 .enquiryForm form *:not(:last-child):not(:first-child) {
     width: 100%;
-    margin: 0.5rem 0;
 }
 
 .enquiryForm input[type="submit"] {
@@ -51,7 +53,38 @@
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+}
+
+.enquiryForm input[type="submit"]:active {
+    /* border: none; */
+    background-color: var(--animesh-choice-black);
+    color: white;
 }
 
 /* For centering the form, use https://stackoverflow.com/questions/8097744/how-do-i-center-this-form-in-css */
+
+.enquiryForm select {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.enquiryForm input {
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 0.25rem 0 1rem 0;
+}
+
+.enquiryForm input:not(input[type="submit"]):focus, .enquiryForm textarea:focus {
+    /* outline: none; */
+    outline: 3px solid var(--lime-green);
+}
+
+.enquiryForm textarea {
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 0.25rem 0 1rem 0;
+}

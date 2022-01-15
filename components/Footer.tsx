@@ -7,9 +7,9 @@ const Footer = () => (
     <nav className={styles.footerNav}>
       <ul className={styles.footerLinks}>
         <li>
-          <Link href="/credits">
+          {/* <Link href="/credits">
             <a>Credits</a>
-          </Link>
+          </Link> */}
         </li>
         <li>
           <Link href="/contact">
@@ -55,7 +55,7 @@ const Footer = () => (
         </li>
       </ul>
     </nav>
-    <p>© Copyright and trademark owned by Chahal Pahal Tea</p>
+    <p>© Copyright & trademark owned by Chahal Pahal Tea</p>
   </footer>
 );
 

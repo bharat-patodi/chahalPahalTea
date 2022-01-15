@@ -5,7 +5,7 @@ const Credits = () => (
   <>
     <Header />
     <main>
-      <p>
+      {/* <p>
         Photo by{" "}
         <a href="https://unsplash.com/@aniketh_kanukurthi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
           Aniketh Kanukurthi
@@ -44,7 +44,7 @@ const Credits = () => (
         <a href="https://unsplash.com/s/photos/tea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
           Unsplash
         </a>
-      </p>
+      </p> */}
     </main>
     <Footer />
   </>
