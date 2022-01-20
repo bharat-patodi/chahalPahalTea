@@ -3,24 +3,30 @@ import Footer from "../components/Footer";
 import styles from "../styles/Contact.module.css";
 import { supabase } from "../utils/supabaseClient";
 
-const dbEnable = () => {
+const dbEnable = async () => {
   // let supabseStuff = supabase;
-  console.log(supabase.from("leads").select("*"));
+  let result = await supabase.from("Leads").select("*");
+  console.log(supabase.from("Leads").select("*"));
+  console.log(result);
 };
 
-const dbAdd = () => {
-  supabase
-    .from("leads")
-    .insert([
-      {
-        created_at: Date.now(),
-        name: "test",
-        email: "test@test.com",
-        number: 9898989898,
-        message: "test",
-      },
-    ]);
+const dbAdd = async () => {
   console.log("Data added");
+  let name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let telephone = 99999999 || document.querySelector("#telephone").value;
+  let message = document.querySelector("#message").value;
+  console.log(name, email, telephone, message);
+  await supabase
+    .from("Leads")
+    .insert(
+      {
+        name: name,
+        email: email,
+        number: telephone,
+        message: message,
+      },
+    );
 };
 
 const Contact = () => (
@@ -40,7 +46,7 @@ const Contact = () => (
             <input
               type="text"
               name=""
-              id=""
+              id="name"
               placeholder="animesh jain"
               required
             />
@@ -48,14 +54,14 @@ const Contact = () => (
             <input
               type="email"
               name=""
-              id=""
+              id="email"
               placeholder="animesh@gmail.com"
               required
             />
             <label>Number</label>
-            <input type="tel" name="" id="" placeholder="9099090191" required />
+            <input type="tel" name="" id="telephone" placeholder="9099090191" required />
             <label>Message</label>
-            <textarea name="" id="" cols={30} rows={10}></textarea>
+            <textarea name="" id="message" cols={30} rows={10}></textarea>
             <input type="submit" value="Add Data" onClick={dbAdd} />
             <input type="submit" value="Submit" onClick={dbEnable} />
           </form>
