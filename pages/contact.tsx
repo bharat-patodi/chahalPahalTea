@@ -12,10 +12,10 @@ const dbEnable = async () => {
 
 const dbAdd = async () => {
   console.log("Data added");
-  let name = document.querySelector("#name").value;
-  let email = document.querySelector("#email").value;
-  let telephone = 99999999 || document.querySelector("#telephone").value;
-  let message = document.querySelector("#message").value;
+  let name = (document.querySelector("#name") as HTMLInputElement)?.value;
+  let email = (document.querySelector("#email") as HTMLInputElement).value;
+  let telephone = 99999999 || (document.querySelector("#telephone") as HTMLInputElement)?.value;
+  let message = (document.querySelector("#message") as HTMLInputElement).value;
   console.log(name, email, telephone, message);
   await supabase
     .from("Leads")
