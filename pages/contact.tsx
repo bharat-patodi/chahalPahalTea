@@ -4,7 +4,6 @@ import styles from "../styles/Contact.module.css";
 import { supabase } from "../utils/supabaseClient";
 
 const dbEnable = async () => {
-  // let supabseStuff = supabase;
   let result = await supabase.from("Leads").select("*");
   console.log(supabase.from("Leads").select("*"));
   console.log(result);
