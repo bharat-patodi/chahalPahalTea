@@ -10,16 +10,20 @@ import { supabase } from "../utils/supabaseClient";
 // };
 
 const addLead = async () => {
+  let usertype =  (document.querySelector("#usertype") as HTMLSelectElement)?.value;
+  let name =      (document.querySelector("#name") as HTMLInputElement)?.value;
+  let email =     (document.querySelector("#email") as HTMLInputElement)?.value;
+  let telephone = Number((document.querySelector("#telephone") as HTMLInputElement)?.value);
+  let message =   (document.querySelector("#message") as HTMLInputElement)?.value;
+
   console.log("Data added");
-  let name = (document.querySelector("#name") as HTMLInputElement)?.value;
-  let email = (document.querySelector("#email") as HTMLInputElement).value;
-  let telephone = Number((document.querySelector("#telephone") as HTMLInputElement)?.value) || 9999999999;
-  let message = (document.querySelector("#message") as HTMLInputElement).value;
-  console.log(name, email, typeof telephone, message);
+  console.log(typeof usertype, name, email, typeof telephone, telephone, message);
+
   await supabase
     .from("Leads")
     .insert(
       {
+        usertype: usertype,
         name: name,
         email: email,
         number: telephone,
@@ -37,7 +41,7 @@ const Contact = () => (
         <section className={styles.enquiryForm}>
           <h3>Enquiry Form</h3>
           <form action="post">
-            <select name="" id="">
+            <select name="" id="usertype">
               <option value="customer">Customer</option>
               <option value="distributor">Distributor</option>
             </select>
@@ -61,8 +65,7 @@ const Contact = () => (
             <input type="tel" name="" id="telephone" placeholder="9099090191" required />
             <label>Message</label>
             <textarea name="" id="message" cols={30} rows={10}></textarea>
-            {/* <input type="submit" value="Add Data" onClick={dbAdd} /> */}
-            <input type="submit" value="Submit" onClick={addLead} />
+            <input type="button" value="Submit" onClick={addLead} />
           </form>
         </section>
         <section className={styles.contactDetails}>

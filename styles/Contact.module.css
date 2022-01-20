@@ -46,7 +46,7 @@
     width: 100%;
 }
 
-.enquiryForm input[type="submit"] {
+.enquiryForm input[type="button"] {
     background-color: var(--lime-green);
     font-size: 1.08rem;
     padding: 0.5rem 1rem;
@@ -55,7 +55,7 @@
     cursor: pointer;
 }
 
-.enquiryForm input[type="submit"]:active {
+.enquiryForm input[type="button"]:active {
     /* border: none; */
     background-color: var(--animesh-choice-black);
     color: white;
@@ -76,7 +76,7 @@
     margin: 0.25rem 0 1rem 0;
 }
 
-.enquiryForm input:not(input[type="submit"]):focus, .enquiryForm textarea:focus {
+.enquiryForm input:not(input[type="button"]):focus, .enquiryForm textarea:focus {
     /* outline: none; */
     outline: 3px solid var(--lime-green);
 }
