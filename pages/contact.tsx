@@ -3,19 +3,19 @@ import Footer from "../components/Footer";
 import styles from "../styles/Contact.module.css";
 import { supabase } from "../utils/supabaseClient";
 
-const dbEnable = async () => {
-  let result = await supabase.from("Leads").select("*");
-  console.log(supabase.from("Leads").select("*"));
-  console.log(result);
-};
+// const dbEnable = async () => {
+//   let result = await supabase.from("Leads").select("*");
+//   console.log(supabase.from("Leads").select("*"));
+//   console.log(result);
+// };
 
-const dbAdd = async () => {
+const addLead = async () => {
   console.log("Data added");
   let name = (document.querySelector("#name") as HTMLInputElement)?.value;
   let email = (document.querySelector("#email") as HTMLInputElement).value;
-  let telephone = 99999999 || (document.querySelector("#telephone") as HTMLInputElement)?.value;
+  let telephone = Number((document.querySelector("#telephone") as HTMLInputElement)?.value) || 9999999999;
   let message = (document.querySelector("#message") as HTMLInputElement).value;
-  console.log(name, email, telephone, message);
+  console.log(name, email, typeof telephone, message);
   await supabase
     .from("Leads")
     .insert(
@@ -61,8 +61,8 @@ const Contact = () => (
             <input type="tel" name="" id="telephone" placeholder="9099090191" required />
             <label>Message</label>
             <textarea name="" id="message" cols={30} rows={10}></textarea>
-            <input type="submit" value="Add Data" onClick={dbAdd} />
-            <input type="submit" value="Submit" onClick={dbEnable} />
+            {/* <input type="submit" value="Add Data" onClick={dbAdd} /> */}
+            <input type="submit" value="Submit" onClick={addLead} />
           </form>
         </section>
         <section className={styles.contactDetails}>
