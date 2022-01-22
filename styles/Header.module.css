@@ -27,6 +27,11 @@
   text-decoration: none;
 }
 
+.header .logo {
+  width: 17px;
+  width: 30px;
+}
+
 .header a:hover {
   color: var(--lime-green);
 }

@@ -8,7 +8,7 @@ const Header = () => (
       <ul className={styles.headerNavUl}>
         <li>
           <Link href="/">
-            <a>Logo</a>
+            <a><img src="logo.png" alt="logo" className={styles.logo}/></a>
           </Link>
         </li>
         <li>
