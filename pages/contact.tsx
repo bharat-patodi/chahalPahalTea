@@ -19,7 +19,7 @@ const addLead = async () => {
   console.log("Data added");
   console.log(typeof usertype, name, email, typeof telephone, telephone, message);
 
-  await supabase
+  let result = await supabase
     .from("Leads")
     .insert(
       {
@@ -30,6 +30,11 @@ const addLead = async () => {
         message: message,
       },
     );
+  // Console log the response from server
+  console.log(result);
+
+
+
 };
 
 const Contact = () => (
