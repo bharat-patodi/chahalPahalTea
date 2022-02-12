@@ -2,6 +2,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Contact.module.css";
 import { supabase } from "../utils/supabaseClient";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // const dbEnable = async () => {
 //   let result = await supabase.from("Leads").select("*");
@@ -9,32 +11,33 @@ import { supabase } from "../utils/supabaseClient";
 //   console.log(result);
 // };
 
-const addLead = async () => {
+const addLead = async (e: any) => {
   let usertype =  (document.querySelector("#usertype") as HTMLSelectElement)?.value;
   let name =      (document.querySelector("#name") as HTMLInputElement)?.value;
   let email =     (document.querySelector("#email") as HTMLInputElement)?.value;
   let telephone = Number((document.querySelector("#telephone") as HTMLInputElement)?.value);
   let message =   (document.querySelector("#message") as HTMLInputElement)?.value;
+  e.preventDefault();
 
-  console.log("Data added");
-  console.log(typeof usertype, name, email, typeof telephone, telephone, message);
-
-  let result = await supabase
-    .from("Leads")
-    .insert(
-      {
-        usertype: usertype,
+  let response = await supabase
+  .from("Leads")
+  .insert(
+    {
+      usertype: usertype,
         name: name,
         email: email,
         number: telephone,
         message: message,
       },
     );
-  // Console log the response from server
-  console.log(result);
-
-
-
+  console.log(response);
+    // Console log the response from server
+    if(response.status === 201) {
+      console.log("Data added");
+      console.log(response);
+      toast.success("Data added successfully", {position: toast.POSITION.TOP_CENTER});
+  }
+  e.target.reset();
 };
 
 const Contact = () => (
@@ -45,7 +48,7 @@ const Contact = () => (
       <div className={styles.contact}>
         <section className={styles.enquiryForm}>
           <h3>Enquiry Form</h3>
-          <form action="post">
+          <form action="post" onSubmit={addLead}>
             <select name="" id="usertype">
               <option value="customer">Customer</option>
               <option value="distributor">Distributor</option>
@@ -67,10 +70,16 @@ const Contact = () => (
               required
             />
             <label>Number</label>
-            <input type="tel" name="" id="telephone" placeholder="9099090191" required />
+            <input
+              type="tel"
+              name=""
+              id="telephone"
+              placeholder="9099090191"
+              required
+            />
             <label>Message</label>
             <textarea name="" id="message" cols={30} rows={10}></textarea>
-            <input type="button" value="Submit" onClick={addLead} />
+            <input type="submit" value="Submit" />
           </form>
         </section>
         <section className={styles.contactDetails}>
@@ -78,6 +87,7 @@ const Contact = () => (
           <p>Email: tejpan.biz@gmail.com</p>
         </section>
       </div>
+      <ToastContainer />
     </main>
     <Footer />
   </>
