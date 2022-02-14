@@ -35,7 +35,9 @@ const addLead = async (e: any) => {
     if(response.status === 201) {
       console.log("Data added");
       console.log(response);
-      toast.success("Data added successfully", {position: toast.POSITION.TOP_CENTER});
+      toast.success(" \u{1F44D} Thank You for your enquiry", {
+        position: toast.POSITION.TOP_CENTER,
+      });
   }
   e.target.reset();
 };
