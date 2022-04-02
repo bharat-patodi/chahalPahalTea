@@ -49,7 +49,7 @@
 }
 
 .enquiryForm input[type="submit"] {
-    background-color: var(--lime-green);
+    background-color: var(--animesh-choice-green);
     font-size: 1.08rem;
     padding: 0.5rem 1rem;
     border: none;
@@ -80,7 +80,7 @@
 
 .enquiryForm input:not(input[type="submit"]):focus, .enquiryForm textarea:focus {
     /* outline: none; */
-    outline: 3px solid var(--lime-green);
+    outline: 3px solid var(--animesh-choice-green);
 }
 
 .enquiryForm textarea {

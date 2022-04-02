@@ -1,0 +1,7 @@
+.productView {
+    border: 3px solid red;
+}
+
+.productDashboard {
+    display: flex;
+}

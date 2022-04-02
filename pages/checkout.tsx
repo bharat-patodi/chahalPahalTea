@@ -2,17 +2,17 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 
-const Cart = () => {
+const Checkout = () => {
   return (
     <>
       <Header />
       <main>
         <div>
-          <h1>Cart</h1>
-          <p>This is the Cart</p>
-          <Link href="/checkout">
+          <h1>Checkout</h1>
+          <p>This is the Checkout page</p>
+          <Link href="https://rzp.io/i/lLY1KwyYG">
             <a>
-              <button>Checkout</button>
+              <button>Buy Now</button>
             </a>
           </Link>
         </div>
@@ -21,4 +21,4 @@ const Cart = () => {
     </>
   );
 };
-export default Cart;
+export default Checkout;
