@@ -16,6 +16,26 @@ const Footer = () => (
             <a>Contact</a>
           </Link>
         </li>
+        <li>
+          <Link href="/privacy">
+            <a>Privacy Policy</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/returns">
+            <a>Returns</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/delivery">
+            <a>Delivery</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/terms">
+            <a>Terms</a>
+          </Link>
+        </li>
       </ul>
       <ul className={styles.socialLinks}>
         <li>
