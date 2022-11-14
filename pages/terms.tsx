@@ -12,7 +12,7 @@ const Terms = () => {
             PLEASE READ THIS TERMS AND CONDITIONS CAREFULLY. BY USING THIS
             WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE TO BE BOUND
             BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. This Terms of
-            Service Agreement (the "Agreement") governs your use of this
+            Service Agreement (the &quot;Agreement&quot;) governs your use of this
             website, www.chahalpahaltea.com. Offer of products for purchase on
             this Website, or your purchase of products available on this
             Website. This Agreement includes, and incorporates by this
@@ -34,7 +34,7 @@ const Terms = () => {
             do not agree to this Agreement (including any referenced policies or
             guidelines), please immediately terminate your use of the Website.
             I. PRODUCTS Terms of Offer. This Website offers for sale certain
-            products (the "Products"). By placing an order for Products through
+            products (the &quot;Products&quot;). By placing an order for Products through
             this Website, you agree to the terms set forth in this Agreement.
             Proprietary Rights TEJPAN ENTERPRISES has proprietary rights and
             trade secrets in the Products. You may not reproduce, resell or
@@ -64,13 +64,13 @@ const Terms = () => {
             information without express written authorization from TEJPAN
             ENTERPRISES. III. DISCLAIMER OF WARRANTIES Your use of this website
             and/or products are at your sole risk. the website and products are
-            offered on an "as is" and "as available" basis. Tejpan Enterprises
+            offered on an &quot;as is&quot; and &quot;as available&quot; basis. Tejpan Enterprises
             expressly disclaims all warranties of any kind, whether express or
             implied, including, but not limited to, implied warranties of
             merchantability, fitness for a particular purpose and
             non-infringement with respect to the products or website content, or
             any reliance upon or use of the website content or products.
-            ("products" include trial products.) that the information provided
+            (&quot;products&quot; include trial products.) that the information provided
             on this website is accurate, reliable, complete, or timely. IV.
             LIMITATION OF LIABILITY TEJPAN ENTERPRISES’s entire liability, and
             your exclusive remedy, in law, in equity, or otherwise, with respect
@@ -88,7 +88,7 @@ const Terms = () => {
             ENTERPRISES, and any of its contractors, agents, employees,
             officers, directors, shareholders, affiliates and assigns from all
             liabilities, claims, damages, costs and expenses, including
-            reasonable attorneys' fees and expenses, of third parties relating
+            reasonable attorneys&apos; fees and expenses, of third parties relating
             to or arising out of (1) this Agreement or the breach of your
             warranties, representations and obligations under this Agreement;
             (2) the Website content or your use of the Website content; (3) the
@@ -129,7 +129,7 @@ const Terms = () => {
             this Agreement will not constitute a waiver of such right or
             provision. If any provision of this Agreement is found by a court of
             competent jurisdiction to be invalid, the parties nevertheless agree
-            that the court should endeavour to give effect to the parties'
+            that the court should endeavour to give effect to the parties&apos;
             intentions as reflected in the provision, and the other provisions
             of this Agreement remain in full force and effect. Governing Law;
             Jurisdiction. This Website originates from Indore, MP. This
