@@ -9,12 +9,13 @@ const Cart = () => {
       <main>
         <div>
           <h1>Cart</h1>
-          <p>This is the Cart</p>
+          <h2>Coming Soon</h2>
+          {/* <p>This is the Cart</p>
           <Link href="/checkout">
             <a>
               <button>Checkout</button>
             </a>
-          </Link>
+          </Link> */}
         </div>
       </main>
       <Footer />
