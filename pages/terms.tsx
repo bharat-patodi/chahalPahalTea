@@ -75,7 +75,7 @@ const Terms = () => {
             any reliance upon or use of the website content or products.
             (&quot;products&quot; include trial products.) that the information provided
             on this website is accurate, reliable, complete, or timely. IV.
-            LIMITATION OF LIABILITY TEJPAN ENTERPRISES’s entire liability, and
+            LIMITATION OF LIABILITY TEJPAN ENTERPRISES&apos;s entire liability, and
             your exclusive remedy, in law, in equity, or otherwise, with respect
             to the website content and products and/or for any breach of this
             agreement is solely limited to the amount you paid, less shipping
@@ -106,11 +106,11 @@ const Terms = () => {
             be a material breach of this Agreement. TEJPAN ENTERPRISES will have
             the right to participate in any defense by you of a third-party
             claim related to your use of any of the Website content or Products,
-            with counsel of TEJPAN ENTERPRISES’s choice at its expense. TEJPAN
+            with counsel of TEJPAN ENTERPRISES&apos;s choice at its expense. TEJPAN
             ENTERPRISES will reasonably cooperate in any defense by you of a
             third-party claim at your request and expense. You will have sole
             responsibility to defend TEJPAN ENTERPRISES against any claim, but
-            you must receive TEJPAN ENTERPRISES’s prior written consent
+            you must receive TEJPAN ENTERPRISES&apos;s prior written consent
             regarding any related settlement. The terms of this provision will
             survive any termination or cancellation of this Agreement or your
             use of the Website or Products. VI. AGREEMENT TO BE BOUND By using
