@@ -11,7 +11,10 @@ const Terms = () => {
           <p>
             PLEASE READ THIS TERMS AND CONDITIONS CAREFULLY. BY USING THIS
             WEBSITE OR ORDERING PRODUCTS FROM THIS WEBSITE YOU AGREE TO BE BOUND
-            BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. This Terms of
+            BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT.
+            </p>
+            <p>
+            This Terms of
             Service Agreement (the &quot;Agreement&quot;) governs your use of this
             website, www.chahalpahaltea.com. Offer of products for purchase on
             this Website, or your purchase of products available on this

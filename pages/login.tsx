@@ -12,7 +12,7 @@ const Login = () => {
           <p>This is the login page</p>
           <p>
             {/* error  HTML entities must be escaped  react/no-unescaped-entities */}
-            Once you&apos;re logged in, you will be routed back to the{" "}
+            Once you&apos;re logged in, you will be routed back to the
             <Link href="/">
               <a>Home Page</a>
             </Link>
