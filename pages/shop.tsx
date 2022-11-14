@@ -11,12 +11,12 @@ const Shop = () => {
       <main>
         <div>
           <h1>Shop</h1>
-          <p>This is the Shop page</p>
+          <h2>Coming Soon</h2>
         </div>
-        <section className={styles.productDashboard}>
+        {/* <section className={styles.productDashboard}>
           <ProductView name="tea-bag" />
           <ProductView name="tea-bag" />
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>
