@@ -85,7 +85,7 @@ const ProductView = (props: any) => {
           {props.shipping + props.price}
         </p>
         <label htmlFor="">
-          <span className={styles.highlightText}>Weight:</span>
+          <span className={styles.highlightText}>Weight:</span>{" "}
           {/* <select name="quantity" id="">
             <option value="250gm">250gm</option>
             <option value="500gm">500gm</option>
