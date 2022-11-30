@@ -93,11 +93,12 @@ const ProductView = (props: any) => {
           <input type="text" />
         </label> */}
         {/* <Link href="/cart"> */}
-        <a href={props.href} target="_blank">
+        <a href={props.href} target="_blank" rel="noreferrer">
           <button>Purchase</button>
           {/* <button>Add to Cart</button> */}
         </a>
         {/* </Link> */}
+        <p>*After payment, please whatsapp/message your complete postal address on this number: +91 90990-90191</p>
       </div>
     </>
   );
