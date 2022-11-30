@@ -8,7 +8,7 @@ const Shop = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className={styles.shopPage}>
         <div>
           <h1>Shop</h1>
           {/* <h2>Coming Soon</h2> */}
@@ -76,9 +76,9 @@ const ProductView = (props: any) => {
           className={styles.productImage}
         />
         <p>{props.details}</p>
-        <p>Price: {props.price}</p>
-        <p>Shipping: {props.shipping}</p>
-        <p>Total: {props.shipping + props.price}</p>
+        <p><span className={styles.highlightText}>Price:</span> {props.price}</p>
+        <p><span className={styles.highlightText}>Shipping:</span> {props.shipping}</p>
+        <p><span className={styles.highlightText}>Total:</span> {props.shipping + props.price}</p>
         <label htmlFor="">
           Weight:
           {/* <select name="quantity" id="">
@@ -94,11 +94,11 @@ const ProductView = (props: any) => {
         </label> */}
         {/* <Link href="/cart"> */}
         <a href={props.href} target="_blank" rel="noreferrer">
-          <button>Purchase</button>
+          <button className={styles.productPurchaseBtn}>Purchase</button>
           {/* <button>Add to Cart</button> */}
         </a>
         {/* </Link> */}
-        <p>*After payment, please whatsapp/message your complete postal address on this number: +91 90990-90191</p>
+        <p className={styles.disclaimer}>*After payment, please whatsapp/message your complete postal address on this number: +91 90990-90191</p>
       </div>
     </>
   );

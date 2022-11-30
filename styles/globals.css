@@ -158,39 +158,8 @@ Variables
 
 :root {
   /* Colors Begin */
-  --mustard: #ffc600;
-  --navy: #001f3f;
-  --blue: #0074d9;
-  --aqua: #7fdbff;
-  --teal: #39cccc;
-  --olive: #3d9970;
-  --green: #2ecc40;
-  --lime-green: #01ff70;
-  --yellow: #ffdc00;
-  --sunflower: #f1c40f;
-  --orange: #ff851b;
-  --maroon: #85144b;
-  --black: #111111;
   --black-soothing: #272727;
-  --grey: #aaaaaa;
-  --concrete: #95a5a6;
-  --asbestos: #7f8c8d;
   --silver: #dddddd;
-  --cloud-white: #ecf0f1;
-  --red: #ff4136;
-  --alizarin: #e74c3c;
-  --pomegranate: #c0392b;
-  --slick-red: #f93d66;
-  --peter-river: #3498db;
-  --belize-hole: #2980b9;
-  --fuchsia: #f012be;
-  --midnight-blue: #2c3e50;
-  --wet-asphalt: #34495e;
-  --purple: #b10dc9;
-  --amethyst: #9b59b6;
-  --wisteria: #8e44ad;
-  --bright-purple: #6d47d9;
-  --notification-green: #88ffd1;
   /* Color Dark Theme Begin (re: Github Dark Mode) */
   --dark-mode-black: #06090f;
   --dark-mode-light-purple: #6e40c9;
@@ -253,7 +222,10 @@ h1, h2, h3, h4, h5, h6 {
   /* font-family: "Nunito Sans", sans-serif; */
   font-weight: 700;
   text-align: center;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  /* Don't add a margin-top,  otherwise because of margin-collapse, there would be whitespace on top of the containing div. Instead use a padding-bottom for the containing div */
+  /* margin-top: 1rem; */
+
 
 }
 
@@ -263,7 +235,7 @@ h1, h2 {
 
 h1 {
   font-size: 5rem;
-  margin: 2rem;
+  margin-bottom: 2rem;
   font-weight: 900;
 }
 
