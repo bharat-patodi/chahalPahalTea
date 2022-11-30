@@ -1,11 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import styles from "../styles/About.module.css";
 
 const About = () => {
   return (
-    <>
+    <div className={`${styles.aboutPage}`}>
       <Header />
-      <main>
+      <main className="container">
         <div>
           <h1>About</h1>
           <p>
@@ -21,7 +22,7 @@ const About = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default About;
