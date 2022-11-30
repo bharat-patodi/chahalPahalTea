@@ -11,7 +11,7 @@ const Checkout = () => {
           <h1>Checkout</h1>
           <p>This is the Checkout page</p>
           <Link href="https://rzp.io/i/lLY1KwyYG">
-            <a>
+            <a target="_blank">
               <button>Buy Now</button>
             </a>
           </Link>

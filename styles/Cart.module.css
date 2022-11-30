@@ -1,0 +1,9 @@
+.cartDashboard {
+    display: flex;
+    gap: 2rem;
+    border: 3px solid gray;
+}
+
+.customerDetails, .cart {
+    border: 3px solid;
+}

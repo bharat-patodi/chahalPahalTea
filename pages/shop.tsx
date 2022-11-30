@@ -11,12 +11,55 @@ const Shop = () => {
       <main>
         <div>
           <h1>Shop</h1>
-          <h2>Coming Soon</h2>
+          {/* <h2>Coming Soon</h2> */}
         </div>
-        {/* <section className={styles.productDashboard}>
-          <ProductView name="tea-bag" />
-          <ProductView name="tea-bag" />
-        </section> */}
+        <section className={styles.productDashboard}>
+          <ProductView
+            name="Premium Tea"
+            src="premium-tea.png"
+            details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
+            href="https://rzp.io/i/Q79HQ5ux"
+            price={330}
+            weight="1kg"
+            shipping={50}
+          />
+          <ProductView
+            name="Elaichi Tea"
+            src="elaichi-tea.png"
+            details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
+            href="https://rzp.io/i/MEaTQqS"
+            price={125}
+            weight="250gm"
+            shipping={50}
+          />
+          <ProductView
+            name="Adrak Tea"
+            src="adrak-tea.png"
+            details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
+            href="https://rzp.io/i/6r0t0s9"
+            price={120}
+            weight="250gm"
+            shipping={50}
+          />
+          <ProductView
+            name="Masala Tea"
+            src="masala-tea.png"
+            details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
+            href="https://rzp.io/i/TzZAvbE"
+            price={125}
+            weight="250gm"
+            shipping={50}
+          />
+          <ProductView
+            name="All Flavours in One"
+            src="masala-tea.png"
+            details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
+            href="https://rzp.io/i/Nsl9maW18"
+            price={508}
+            weight="250gm x 4 = 1 kg"
+            shipping={0}
+          />
+        </section>
       </main>
       <Footer />
     </>
@@ -29,27 +72,32 @@ const ProductView = (props: any) => {
       <div className={styles.productView}>
         <h3>{props.name}</h3>
         <img
-          src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1921&q=80"
-          width="20%"
+          src={props.src}
+          className={styles.productImage}
         />
-        <p>Product Details</p>
+        <p>{props.details}</p>
+        <p>Price: {props.price}</p>
+        <p>Shipping: {props.shipping}</p>
+        <p>Total: {props.shipping + props.price}</p>
         <label htmlFor="">
-          Weight
-          <select name="quantity" id="">
+          Weight:
+          {/* <select name="quantity" id="">
             <option value="250gm">250gm</option>
             <option value="500gm">500gm</option>
             <option value="1kg">1kg</option>
-          </select>
+          </select> */}
+          {props.weight}
         </label>
-        <label>
+        {/* <label>
           Quantity
           <input type="text" />
-        </label>
-        <Link href="/cart">
-          <a>
-            <button>Add to Cart</button>
-          </a>
-        </Link>
+        </label> */}
+        {/* <Link href="/cart"> */}
+        <a href={props.href} target="_blank">
+          <button>Purchase</button>
+          {/* <button>Add to Cart</button> */}
+        </a>
+        {/* </Link> */}
       </div>
     </>
   );

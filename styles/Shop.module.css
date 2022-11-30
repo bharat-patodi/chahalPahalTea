@@ -1,7 +1,14 @@
 .productView {
     border: 3px solid red;
+    max-width: 300px;
 }
 
 .productDashboard {
     display: flex;
+    justify-content: space-around;
+    border: 3px solid green;
+}
+
+.productImage {
+    width: 30%;
 }
