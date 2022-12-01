@@ -38,13 +38,13 @@ const Footer = () => (
         </li>
       </ul>
       <ul className={styles.socialLinks}>
-        <li>
+        {/* <li>
           <Link href="/contact">
             <a>
               <FontAwesomeIcon icon={["fab", "twitter"]} />
             </a>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="https://www.instagram.com/chahal_pahal_tea/">
             <a>
