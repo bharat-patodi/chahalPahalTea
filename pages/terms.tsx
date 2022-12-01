@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 
 const Terms = () => {
   return (
-    <>
+    <div className="superContainer">
       <Header />
-      <main>
+      <main className="container">
         <div>
           <h1>Terms</h1>
           <p>
@@ -215,7 +215,7 @@ const Terms = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Terms;

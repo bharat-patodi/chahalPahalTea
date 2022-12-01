@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 
 const Returns = () => {
   return (
-    <>
+    <div className="superContainer">
       <Header />
-      <main>
+      <main className="container">
         <div>
           <h1>Returns</h1>
             <h2>Cancellation of order</h2>
@@ -38,7 +38,7 @@ const Returns = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Returns;

@@ -3,10 +3,10 @@ import Footer from "../components/Footer";
 
 const Delivery = () => {
   return (
-    <>
+    <div className="superContainer">
       <Header />
       <main>
-        <div>
+        <div className="container">
           <h1>Shipping and Delivery</h1>
           <h2>Shipping</h2>
           <p>
@@ -52,7 +52,7 @@ const Delivery = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Delivery;

@@ -1,10 +1,9 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styles from "../styles/Privacy.module.css";
 
 const Privacy = () => {
   return (
-    <div className={styles.privacyPage}>
+    <div className="privacyPage">
       <Header />
       <main className="container">
         <div>

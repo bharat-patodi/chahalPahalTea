@@ -4,7 +4,7 @@ import styles from "../styles/About.module.css";
 
 const About = () => {
   return (
-    <div className={`${styles.aboutPage}`}>
+    <div className="superContainer">
       <Header />
       <main className="container">
         <div>
