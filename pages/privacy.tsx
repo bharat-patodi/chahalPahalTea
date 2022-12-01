@@ -1,11 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import styles from "../styles/Privacy.module.css";
 
 const Privacy = () => {
   return (
-    <>
+    <div className={styles.privacyPage}>
       <Header />
-      <main>
+      <main className="container">
         <div>
           <h1>Privacy</h1>
           <p>
@@ -137,7 +138,7 @@ const Privacy = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Privacy;
