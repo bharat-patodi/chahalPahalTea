@@ -87,6 +87,7 @@ const Contact = () => (
         <section className={styles.contactDetails}>
           <p>Phone: +91 90990 90191</p>
           <p>Email: tejpan.biz@gmail.com</p>
+          <p>Address: B-429, Clerk Colony, Indore (Pin Code: 452011)</p>
         </section>
       </div>
       <ToastContainer />
