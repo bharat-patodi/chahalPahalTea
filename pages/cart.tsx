@@ -3,17 +3,18 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import styles from "../styles/Cart.module.css";
 
+/* Forms don't have headings??? */
+
 const Cart = () => {
   return (
-    <>
+    <div className="superContainer">
       <Header />
-      <main>
+      <main className="container">
         <div>
           <h1>Cart</h1>
           <h2>Coming Soon</h2>
-          <div className={styles.cartDashboard}>
+          {/* <div className={styles.cartDashboard}>
             <form className={styles.customerDetails}>
-              {/* Forms don't have headings??? */}
               <h3>Customer Details</h3>
               <label>Name</label>
               <input
@@ -54,7 +55,7 @@ const Cart = () => {
                 </a>
               </Link>
             </div>
-          </div>
+          </div> */}
           {/* <p>This is the Cart</p>
           <Link href="/checkout">
             <a>
@@ -64,7 +65,7 @@ const Cart = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Cart;
