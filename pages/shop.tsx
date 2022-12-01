@@ -36,7 +36,7 @@ const Shop = () => {
             name="Adrak Tea"
             src="adrak-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
-            href="https://rzp.io/i/6r0t0s9"
+            href="https://rzp.io/i/jDYk74VMf"
             price={120}
             weight="250gm"
             shipping={50}
