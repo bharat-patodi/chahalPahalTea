@@ -19,9 +19,9 @@ const Shop = () => {
             src="premium-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/Q79HQ5ux"
-            price={330}
+            price={430}
             weight="1 kg"
-            shipping={50}
+            shipping={0}
           />
           <ProductView
             name="Elaichi Tea"
