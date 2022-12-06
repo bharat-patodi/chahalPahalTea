@@ -20,7 +20,7 @@ const Shop = () => {
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/Q79HQ5ux"
             price={330}
-            weight="1kg"
+            weight="1 kg"
             shipping={50}
           />
           <ProductView
@@ -29,7 +29,7 @@ const Shop = () => {
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/MEaTQqS"
             price={125}
-            weight="250gm"
+            weight="250 gm"
             shipping={50}
           />
           <ProductView
@@ -38,7 +38,7 @@ const Shop = () => {
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/jDYk74VMf"
             price={120}
-            weight="250gm"
+            weight="250 gm"
             shipping={50}
           />
           <ProductView
@@ -46,8 +46,8 @@ const Shop = () => {
             src="masala-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/TzZAvbE"
-            price={125}
-            weight="250gm"
+            price={80}
+            weight="250 gm"
             shipping={50}
           />
           <ProductView
@@ -56,7 +56,7 @@ const Shop = () => {
             details=""
             href="https://rzp.io/i/Nsl9maW18"
             price={508}
-            weight="250gm x 4 = 1 kg"
+            weight="250 gm x 4 = 1 kg"
             shipping={0}
           />
         </section>
@@ -74,14 +74,15 @@ const ProductView = (props: any) => {
         <img src={props.src} className={styles.productImage} />
         <p>{props.details}</p>
         <p>
-          <span className={styles.highlightText}>Price:</span> {props.price}
+          <span className={styles.highlightText}>Price: </span> INR{" "}
+          {props.price}
         </p>
         <p>
-          <span className={styles.highlightText}>Shipping:</span>{" "}
+          <span className={styles.highlightText}>Shipping:</span> INR{" "}
           {props.shipping}
         </p>
         <p>
-          <span className={styles.highlightText}>Total:</span>{" "}
+          <span className={styles.highlightText}>Total:</span> INR{" "}
           {props.shipping + props.price}
         </p>
         <label htmlFor="">
