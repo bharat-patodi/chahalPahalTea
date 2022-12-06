@@ -92,7 +92,7 @@ const HamburgerNavComponent = () => {
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/shop">
           <a>Shop</a>
         </Link>
       </li>
@@ -107,7 +107,7 @@ const HamburgerNavComponent = () => {
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/login">
           <a>Login</a>
         </Link>
       </li>
