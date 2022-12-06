@@ -47,28 +47,28 @@ const Footer = () => (
         </li> */}
         <li>
           <Link href="https://www.instagram.com/chahal_pahal_tea/">
-            <a>
+            <a target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={["fab", "instagram"]} />
             </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.facebook.com/chahalpahaltea/">
-            <a>
+            <a target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={["fab", "facebook"]} />
             </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.linkedin.com/showcase/chahal-pahal-tea/">
-            <a>
+            <a target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={["fab", "linkedin"]} />
             </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.youtube.com/channel/UCK1caBDPLiFVNqhcvP6DUOA">
-            <a>
+            <a target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={["fab", "youtube"]} />
             </a>
           </Link>
