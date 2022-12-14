@@ -147,7 +147,7 @@ const ProductView = (props: any) => {
           <input
             type="submit"
             className={styles.productPurchaseBtn}
-            onClick={handleProductAddition}
+            // onClick={handleProductAddition}
             value="Add to Cart"
           />
           {/* </a> */}
