@@ -6,7 +6,7 @@ import { useCartContext } from "../context/XyzContext";
 import Link from "next/link";
 import Image from "next/image";
 
-const handleProductAddition = (e) => {
+const handleProductAddition = (e: Event) => {
   e.preventDefault();
   console.log("Product Added");
 }
