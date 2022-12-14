@@ -2,10 +2,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import styles from "../styles/Cart.module.css";
+import { useCartContext } from "../context/XyzContext";
 
 /* Forms don't have headings??? */
 
 const Cart = () => {
+  const [cart, setCart] = useCartContext();
+
   return (
     <div className="superContainer">
       <Header />
@@ -13,7 +16,22 @@ const Cart = () => {
         <div>
           <h1>Cart</h1>
           <h2>Coming Soon</h2>
-          {/* <div className={styles.cartDashboard}>
+          <div className={styles.cartDashboard}>
+            <section>
+              <p>Total: {cart.total}</p>
+              <p>Adrak qtty: {cart.adrakChai.quantity}</p>
+            </section>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+export default Cart;
+
+{
+  /* <div className={styles.cartDashboard}>
             <form className={styles.customerDetails}>
               <h3>Customer Details</h3>
               <label>Name</label>
@@ -55,17 +73,13 @@ const Cart = () => {
                 </a>
               </Link>
             </div>
-          </div> */}
-          {/* <p>This is the Cart</p>
+          </div> */
+}
+{
+  /* <p>This is the Cart</p>
           <Link href="/checkout">
             <a>
               <button>Checkout</button>
             </a>
-          </Link> */}
-        </div>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-export default Cart;
+          </Link> */
+}
