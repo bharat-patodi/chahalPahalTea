@@ -6,8 +6,8 @@ const teaContext = createContext();
 export const TeaContextProvider = ({ children }) => {
   const [cart, setCart] = useState({
     premiumChai: {
-      price: 450,
-      tempPrice: 450,
+      price: 430,
+      tempPrice: 430,
       quantity: 0,
     },
     elaichiChai: {
