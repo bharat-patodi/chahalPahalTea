@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useState } from "react";
-import { AppContextProvider, TeaContextProvider } from "../context/XyzContext";
+import { TeaContextProvider } from "../context/XyzContext";
 
 // For FontAwesome
 import { config } from "@fortawesome/fontawesome-svg-core";
