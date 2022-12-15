@@ -21,7 +21,6 @@ const Shop = () => {
       <main className={styles.shopPage}>
         <div>
           <h1>Shop</h1>
-          {/* <h2>Coming Soon</h2> */}
         </div>
         <section className={styles.productDashboard}>
           <ProductView
@@ -30,7 +29,7 @@ const Shop = () => {
             src="premium-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/Q79HQ5ux"
-            price={cart.premiumChai.tempPrice}
+            price={cart.premiumChai.gm250.price}
             weight="250 gm"
             shipping={50}
           />
@@ -40,7 +39,7 @@ const Shop = () => {
             src="elaichi-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/MEaTQqS"
-            price={cart.elaichiChai.tempPrice}
+            price={cart.elaichiChai.gm250.price}
             weight="250 gm"
             shipping={50}
           />
@@ -50,7 +49,7 @@ const Shop = () => {
             src="adrak-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/jDYk74VMf"
-            price={cart.adrakChai.tempPrice}
+            price={cart.adrakChai.gm250.price}
             weight="250 gm"
             shipping={50}
           />
@@ -60,20 +59,10 @@ const Shop = () => {
             src="masala-tea.png"
             details="Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients."
             href="https://rzp.io/i/TzZAvbE"
-            price={cart.masalaChai.tempPrice}
+            price={cart.masalaChai.gm250.price}
             weight="250 gm"
             shipping={50}
           />
-          {/* <ProductView
-            name="All Flavours in One"
-            id="allFlavoursChai"
-            src="all-flavours.png"
-            details=""
-            href="https://rzp.io/i/Nsl9maW18"
-            price={508}
-            weight="250 gm x 4 = 1 kg"
-            shipping={0}
-          /> */}
         </section>
       </main>
 
@@ -84,6 +73,7 @@ const Shop = () => {
 
 const ProductView = (props: any) => {
     const [cart, setCart] = useCartContext();
+    const [currentWeight, setCurrentWeight] = useState("gm250");
   return (
     <>
       <div className={styles.productView}>
@@ -93,7 +83,7 @@ const ProductView = (props: any) => {
         <p>{props.details}</p>
         <p>
           <span className={styles.highlightText}>Price: </span> INR{" "}
-          {props.price}
+          {cart[props.id][currentWeight]['price']}
         </p>
         <p>
           <span className={styles.highlightText}>Shipping:</span> INR{" "}
@@ -106,32 +96,33 @@ const ProductView = (props: any) => {
         <form>
           <label htmlFor="">
             <span className={styles.highlightText}>Weight:</span>{" "}
-            <select name="weight" id="" onChange={(e) => {
-              console.log("mast hai");
-              console.log(e.target);
-              console.log(e.target.value);
-              console.log(props.id);
-              console.log(cart);
-              console.log(cart[props.id]);
-              console.log(cart[props.id].price, typeof cart[props.id].price);
-              console.log(Number(cart[props.id].price));
-              console.log(Number(e.target.value));
-              console.log(Number(e.target.value) * Number(cart[props.id].price));
-              // console.log(e.target.parentElement.dataset.chainame);
-              setCart((prevCart: object) => ({
-                ...prevCart,
-                [props.id]: {
-                  quantity: cart[props.id].quantity,
-                  price: cart[props.id].price,
-                  tempPrice: Number(e.target.value)*Number(cart[props.id].price)
-                }
-              }));
-              console.log(cart);
-            }}>
-            <option value="0.25">250gm</option>
-            <option value="0.5">500gm</option>
-            <option value="1">1kg</option>
-          </select>
+            <select
+              name="weight"
+              id=""
+              onChange={(e) => {
+                // setCurrentWeight
+                console.log("changed");
+                console.log(e.target.value);
+                setCurrentWeight(e.target.value);
+                console.log(currentWeight);
+                // console.log(e.target.parentElement.dataset.chainame);
+                // setCart((prevCart: object) => ({
+                //   ...prevCart,
+                //   [props.id]: {
+                //     gm250: {
+                //       price: cart[props.id].price,
+                //       quantity: cart[props.id].quantity
+                //     }
+                //     // tempPrice: Number(e.target.value)*Number(cart[props.id].price)
+                //   }
+                // }));
+                console.log(cart);
+              }}
+            >
+              <option value="gm250">250gm</option>
+              <option value="gm500">500gm</option>
+              <option value="gm1000">1kg</option>
+            </select>
             {/* {props.weight} */}
           </label>
           <label>
