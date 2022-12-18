@@ -1,18 +1,13 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Shop.module.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useCartContext } from "../context/XyzContext";
 import Link from "next/link";
 import Image from "next/image";
 
-const handleProductAddition = (e: Event) => {
-  e.preventDefault();
-  console.log("Product Added");
-}
-
 const Shop = () => {
-  // const [productList, setProductList] = useState();
+
   const [cart, setCart] = useCartContext();
   console.log({cart});
   return (
@@ -74,6 +69,29 @@ const Shop = () => {
 const ProductView = (props: any) => {
     const [cart, setCart] = useCartContext();
     const [currentWeight, setCurrentWeight] = useState("gm250");
+
+    // const weightRef = useRef(null);
+    // const quantityRef = useRef(null);
+    const weightRef = useRef<HTMLSelectElement>(null);
+    const quantityRef = useRef<HTMLSelectElement>(null);
+
+    const handleProductAddition = (e: Event) => {
+      e.preventDefault();
+      const weight = weightRef.current?.value;
+      const quantity = quantityRef.current?.value;
+      setCart((prevCart: object) => ({
+        ...prevCart,
+        // adrakChai: {
+
+        // }
+        weight,
+        quantity
+      }))
+      console.log(weight, quantity);
+      console.log("Product Added");
+      console.log(cart);
+    };
+
   return (
     <>
       <div className={styles.productView}>
@@ -99,24 +117,13 @@ const ProductView = (props: any) => {
             <select
               name="weight"
               id=""
+              ref={weightRef}
               onChange={(e) => {
-                // setCurrentWeight
-                console.log("changed");
-                console.log(e.target.value);
                 setCurrentWeight(e.target.value);
-                console.log(currentWeight);
-                // console.log(e.target.parentElement.dataset.chainame);
-                // setCart((prevCart: object) => ({
-                //   ...prevCart,
-                //   [props.id]: {
-                //     gm250: {
-                //       price: cart[props.id].price,
-                //       quantity: cart[props.id].quantity
-                //     }
-                //     // tempPrice: Number(e.target.value)*Number(cart[props.id].price)
-                //   }
-                // }));
-                console.log(cart);
+                setCart((prevCart: object) => ({
+                  ...prevCart,
+                  "test": "test"
+                }))
               }}
             >
               <option value="gm250">250gm</option>
@@ -127,7 +134,7 @@ const ProductView = (props: any) => {
           </label>
           <label>
             <span className={styles.highlightText}>Quantity:</span>{" "}
-            <select name="quantity" id="">
+            <select name="quantity" id="" ref={quantityRef}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -138,7 +145,7 @@ const ProductView = (props: any) => {
           <input
             type="submit"
             className={styles.productPurchaseBtn}
-            // onClick={handleProductAddition}
+            onClick={handleProductAddition}
             value="Add to Cart"
           />
           {/* </a> */}
