@@ -9,7 +9,7 @@ import Image from "next/image";
 const Shop = () => {
 
   const [cart, setCart] = useCartContext();
-  console.log({cart});
+  // console.log({cart});
   return (
     <>
       <Header />
@@ -69,9 +69,8 @@ const Shop = () => {
 const ProductView = (props: any) => {
     const [cart, setCart] = useCartContext();
     const [currentWeight, setCurrentWeight] = useState("gm250");
-
-    // const weightRef = useRef(null);
-    // const quantityRef = useRef(null);
+    const [currentChai, setCurrentChai] = useState("premiumChai");
+    const [currentQtty, setCurrentQtty] = useState("gm250");
     const weightRef = useRef<HTMLSelectElement>(null);
     const quantityRef = useRef<HTMLSelectElement>(null);
 
@@ -79,14 +78,26 @@ const ProductView = (props: any) => {
       e.preventDefault();
       const weight = weightRef.current?.value;
       const quantity = quantityRef.current?.value;
+      console.log(props.id);
+      console.log(weight);
       setCart((prevCart: object) => ({
         ...prevCart,
-        // adrakChai: {
-
-        // }
+        [currentChai]: {
+          ...prevCart[currentChai],
+          [weight]: {
+            ...prevCart[currentChai][weight],
+            quantity
+          }
+          },
+        // [props.id]: {
+        //   ...props.id,
+        //   "test": "test",
+        //   price: cart.price,
+        //   quantity,
+        // },
         weight,
-        quantity
-      }))
+        quantity,
+      }));
       console.log(weight, quantity);
       console.log("Product Added");
       console.log(cart);
@@ -101,7 +112,7 @@ const ProductView = (props: any) => {
         <p>{props.details}</p>
         <p>
           <span className={styles.highlightText}>Price: </span> INR{" "}
-          {cart[props.id][currentWeight]['price']}
+          {cart[props.id][currentWeight]["price"]}
         </p>
         <p>
           <span className={styles.highlightText}>Shipping:</span> INR{" "}
@@ -120,10 +131,8 @@ const ProductView = (props: any) => {
               ref={weightRef}
               onChange={(e) => {
                 setCurrentWeight(e.target.value);
-                setCart((prevCart: object) => ({
-                  ...prevCart,
-                  "test": "test"
-                }))
+                setCurrentChai(props.id);
+                console.log(props.id, currentChai);
               }}
             >
               <option value="gm250">250gm</option>
@@ -134,7 +143,16 @@ const ProductView = (props: any) => {
           </label>
           <label>
             <span className={styles.highlightText}>Quantity:</span>{" "}
-            <select name="quantity" id="" ref={quantityRef}>
+            <select
+              name="quantity"
+              id=""
+              ref={quantityRef}
+              onChange={(e) => {
+                setCurrentQtty(e.target.value);
+                setCurrentChai(props.id);
+                console.log(props.id, currentChai);
+              }}
+            >
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
