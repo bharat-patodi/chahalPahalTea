@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Shop = () => {
-
+// test commit
   const [cart, setCart] = useCartContext();
   // console.log({cart});
   return (
