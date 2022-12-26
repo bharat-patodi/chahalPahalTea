@@ -8,7 +8,7 @@ export const TeaContextProvider = ({ children }) => {
       name: "Premium Tea",
       details:
         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
-      src: "premium-tea.png",
+      src: "regular-tea-350x550.png",
       shipping: 50,
       gm250: {
         price: 120,
@@ -27,7 +27,7 @@ export const TeaContextProvider = ({ children }) => {
       name: "Elaichi Tea",
       details:
         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
-      src: "elaichi-tea.png",
+      src: "elaichi-tea-350x550.png",
       shipping: 50,
       gm250: {
         price: 125,
@@ -44,7 +44,7 @@ export const TeaContextProvider = ({ children }) => {
     },
     adrakChai: {
       name: "Adrak Tea",
-      src: "adrak-tea.png",
+      src: "adrak-tea-350x550.png",
       details:
         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
       shipping: 50,
@@ -63,7 +63,7 @@ export const TeaContextProvider = ({ children }) => {
     },
     masalaChai: {
       name: "Masala Tea",
-      src: "masala-tea.png",
+      src: "masala-tea-350x550.png",
       details:
         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
       shipping: 50,
