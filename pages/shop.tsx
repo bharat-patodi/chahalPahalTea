@@ -7,9 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Shop = () => {
-  // test commit
   const [cart, setCart] = useCartContext();
-  // console.log({cart});
   return (
     <>
       <Header />
@@ -18,10 +16,10 @@ const Shop = () => {
           <h1>Shop</h1>
         </div>
         <section className={styles.productDashboard}>
-          <ProductView id="premiumChai" />
-          <ProductView id="elaichiChai" />
-          <ProductView id="adrakChai" />
-          <ProductView id="masalaChai" />
+          <ProductCard id="premiumChai" />
+          <ProductCard id="elaichiChai" />
+          <ProductCard id="adrakChai" />
+          <ProductCard id="masalaChai" />
         </section>
       </main>
       <Footer />
@@ -29,7 +27,7 @@ const Shop = () => {
   );
 };
 
-const ProductView = (props: any) => {
+const ProductCard = (props: any) => {
   const [cart, setCart] = useCartContext();
   const [currentWeight, setCurrentWeight] = useState("gm250");
   const [currentChai, setCurrentChai] = useState("premiumChai");
@@ -43,18 +41,23 @@ const ProductView = (props: any) => {
     const quantity = quantityRef.current?.value;
     console.log(props.id);
     console.log(weight);
-    setCart((prevCart: object) => ({
-      ...prevCart,
-      [currentChai]: {
-        ...prevCart[currentChai],
-        [weight]: {
-          ...prevCart[currentChai][weight],
+    setCart((prevCart: { [key: string]: any }) => {
+      if (prevCart && prevCart[currentChai]) {
+        return {
+          ...prevCart,
+          [currentChai]: {
+            ...prevCart[currentChai],
+            [weight as keyof typeof prevCart[typeof currentChai]]: {
+              ...prevCart[currentChai].weight,
+              quantity,
+            },
+          },
+          weight,
           quantity,
-        },
-      },
-      weight,
-      quantity,
-    }));
+        };
+      }
+      return prevCart;
+    });
     console.log(weight, quantity);
     console.log("Product Added");
     console.log(cart);
@@ -62,7 +65,7 @@ const ProductView = (props: any) => {
 
   return (
     <>
-      <div className={styles.productView}>
+      <div className={styles.productCard}>
         <h3>{cart[props.id].name}</h3>
         <img src={cart[props.id].src} className={styles.productImage} />
 
