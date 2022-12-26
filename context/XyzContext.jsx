@@ -5,70 +5,78 @@ const teaContext = createContext();
 export const TeaContextProvider = ({ children }) => {
   const [cart, setCart] = useState({
     premiumChai: {
-      "gm250": {
+      name: "Premium Tea",
+      details:
+        "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
+      src: "premium-tea.png",
+      shipping: 50,
+      gm250: {
         price: 120,
-        // tempPrice: 120,
         quantity: 0,
       },
-      "gm500": {
+      gm500: {
         price: 230,
-        // tempPrice: 230,
         quantity: 0,
       },
-      "gm1000": {
+      gm1000: {
         price: 430,
-        // tempPrice: 430,
         quantity: 0,
       },
     },
     elaichiChai: {
-      "gm250": {
+      name: "Elaichi Tea",
+      details:
+        "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
+      src: "elaichi-tea.png",
+      shipping: 50,
+      gm250: {
         price: 125,
-        // tempPrice: 125,
         quantity: 0,
       },
-      "gm500": {
+      gm500: {
         price: 240,
-        // tempPrice: 240,
         quantity: 0,
       },
-      "gm1000": {
+      gm1000: {
         price: 470,
-        // tempPrice: 470,
         quantity: 0,
       },
     },
     adrakChai: {
-      "gm250": {
+      name: "Adrak Tea",
+      src: "adrak-tea.png",
+      details:
+        "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
+      shipping: 50,
+      gm250: {
         price: 250,
-        // tempPrice: 250,
         quantity: 0,
       },
-      "gm500": {
+      gm500: {
         price: 230,
-        // tempPrice: 230,
         quantity: 0,
       },
-      "gm1000": {
+      gm1000: {
         price: 450,
-        // tempPrice: 450,
         quantity: 0,
       },
     },
     masalaChai: {
-      "gm250": {
+      name: "Masala Tea",
+      src: "masala-tea.png",
+      details:
+        "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
+      shipping: 50,
+      gm250: {
         price: 130,
-        // tempPrice: 130,
         quantity: 0,
       },
-      "gm500": {
+      gm500: {
         price: 250,
-        // tempPrice: 250,
         quantity: 0,
       },
-      "gm1000": {
+      gm1000: {
         price: 490,
-        // tempPrice: 490,
         quantity: 0,
       },
     },
