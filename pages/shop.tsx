@@ -35,8 +35,8 @@ const ProductCard = (props: any) => {
   const weightRef = useRef<HTMLSelectElement>(null);
   const quantityRef = useRef<HTMLSelectElement>(null);
 
-  const handleProductAddition = (e: Event) => {
-    e.preventDefault();
+  const handleProductAddition = (event: MouseEvent) => {
+    event.preventDefault();
     const weight = weightRef.current?.value;
     const quantity = quantityRef.current?.value;
     console.log(props.id);
