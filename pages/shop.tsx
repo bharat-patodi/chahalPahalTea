@@ -24,7 +24,6 @@ const Shop = () => {
           <ProductView id="masalaChai" />
         </section>
       </main>
-
       <Footer />
     </>
   );
@@ -75,10 +74,6 @@ const ProductView = (props: any) => {
         <p>
           <span className={styles.highlightText}>Shipping:</span> INR{" "}
           {cart[props.id].shipping}
-        </p>
-        <p>
-          <span className={styles.highlightText}>Total:</span> INR{" "}
-          {cart[props.id].shipping + props.price}
         </p>
         <form>
           <label htmlFor="">

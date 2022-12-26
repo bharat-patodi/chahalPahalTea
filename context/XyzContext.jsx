@@ -89,4 +89,3 @@ export const TeaContextProvider = ({ children }) => {
 export const useCartContext = () => {
   return useContext(teaContext);
 }
-
