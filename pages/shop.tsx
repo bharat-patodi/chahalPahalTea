@@ -35,8 +35,7 @@ const ProductCard = (props: any) => {
   const weightRef = useRef<HTMLSelectElement>(null);
   const quantityRef = useRef<HTMLSelectElement>(null);
 
-  const handleProductAddition = (event: MouseEvent) => {
-    event.preventDefault();
+  const handleProductAddition = () => {
     const weight = weightRef.current?.value;
     const quantity = quantityRef.current?.value;
     console.log(props.id);
@@ -58,6 +57,7 @@ const ProductCard = (props: any) => {
       }
       return prevCart;
     });
+
     console.log(weight, quantity);
     console.log("Product Added");
     console.log(cart);
@@ -114,12 +114,10 @@ const ProductCard = (props: any) => {
               <option value="4">4</option>
             </select>
           </label>
-          <input
-            type="submit"
+          <button
             className={styles.productPurchaseBtn}
-            onClick={(event: MouseEvent) => handleProductAddition(event)}
-            value="Add to Cart"
-          />
+            onClick={handleProductAddition}
+          >Add to Cart</button>
         </form>
         <p className={styles.disclaimer}>
           *After payment, please whatsapp/message your complete postal address
