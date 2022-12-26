@@ -20,6 +20,9 @@
 
 .productImage {
     width: 50%;
+    /* border: 3px solid black; */
+    display: block;
+    margin: 0 auto;
 }
 
 .productPurchaseBtn {
