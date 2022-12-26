@@ -117,7 +117,7 @@ const ProductCard = (props: any) => {
           <input
             type="submit"
             className={styles.productPurchaseBtn}
-            onClick={handleProductAddition}
+            onClick={(event: MouseEvent) => handleProductAddition(event)}
             value="Add to Cart"
           />
         </form>
