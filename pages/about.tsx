@@ -17,7 +17,8 @@ const About = () => {
             centric and is continuously growing on customer demand. Chahal Pahal
             Premium tea is a quality blend of tea which provided right taste and
             color. Elaichi and adrak flavor comes with original spices and “zero
-            artificial flavors”.
+            artificial flavors. Masala Tea is our most loved tea blend. It has 
+            right mix of 8-Indian herbs which are good for health and tastes great too.”.
           </p>
         </div>
       </main>
