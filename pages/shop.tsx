@@ -74,7 +74,7 @@ const ProductCard = (props: any) => {
           {cart[props.id].shipping}
         </p>
         <form>
-          <label htmlFor="">
+          <label>
             <span className={styles.highlightText}>Weight:</span>{" "}
             <select
               name="weight"
