@@ -3,29 +3,24 @@ import Footer from "../components/Footer";
 import styles from "../styles/Shop.module.css";
 import { useState, useRef } from "react";
 import { useCartContext } from "../context/XyzContext";
-import Link from "next/link";
-import Image from "next/image";
 
-const Shop = () => {
-  const [cart, setCart] = useCartContext();
-  return (
-    <>
-      <Header />
-      <main className={styles.shopPage}>
-        <div>
-          <h1>Shop</h1>
-        </div>
-        <section className={styles.productDashboard}>
-          <ProductCard id="premiumChai" />
-          <ProductCard id="elaichiChai" />
-          <ProductCard id="adrakChai" />
-          <ProductCard id="masalaChai" />
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-};
+const Shop = () => (
+  <>
+    <Header />
+    <main className={styles.shopPage}>
+      <div>
+        <h1>Shop</h1>
+      </div>
+      <section className={styles.productDashboard}>
+        <ProductCard id="premiumChai" />
+        <ProductCard id="elaichiChai" />
+        <ProductCard id="adrakChai" />
+        <ProductCard id="masalaChai" />
+      </section>
+    </main>
+    <Footer />
+  </>
+);
 
 const ProductCard = (props: any) => {
   const [cart, setCart] = useCartContext();
@@ -115,6 +110,7 @@ const ProductCard = (props: any) => {
             </select>
           </label>
           <button
+            type="button"
             className={styles.productPurchaseBtn}
             onClick={handleProductAddition}
           >Add to Cart</button>
