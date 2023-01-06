@@ -8,7 +8,23 @@ import { useCartContext } from "../context/XyzContext";
 
 const Cart = () => {
   const [cart, setCart] = useCartContext();
-
+  console.log(cart);
+  let total =
+    cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
+    cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
+    cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity;
+  // console.log(
+  //   cart.adrakChai.gm1000.price,
+  //   cart.adrakChai.gm1000.quantity,
+  //   typeof (
+  //     cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
+  //     cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
+  //     cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity
+  //   ),
+  //   cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
+  //     cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
+  //     cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity, total, typeof total
+  // );
   return (
     <div className="superContainer">
       <Header />
@@ -18,8 +34,29 @@ const Cart = () => {
           <h2>Coming Soon</h2>
           <div className={styles.cartDashboard}>
             <section>
-              <p>Total: {cart.total}</p>
-              <p>Adrak qtty: {cart.adrakChai.quantity}</p>
+              <p>Total: {total}</p>
+              {/* {Object.values(cart).map(val => {
+                return <p key={1}>{val.name}</p>;
+              })} */}
+              {/* {Object.values(cart).filter((val) => val).map(val => {
+                if(val.quantity > 0) {
+                  return <p>Yes</p>
+                } else return <p>No</p>
+                })} */}
+              {/* mine.filter(val => val.name === "Premium Tea") */}
+              <p>Adrak 500 qtty: {cart.adrakChai.gm500.quantity}</p>
+              <p>Adrak 500 price: {cart.adrakChai.gm500.price}</p>
+              <p>
+                Adrak 500 total:{" "}
+                {cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity}
+              </p>
+              <p>Adrak 1000 qtty: {cart.adrakChai.gm1000.quantity}</p>
+              <p>Adrak 1000 price: {cart.adrakChai.gm1000.price}</p>
+              <p>
+                Adrak 1000 total:{" "}
+                {cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity}
+              </p>
+              {console.log(cart.adrakChai.gm250.price)}
             </section>
           </div>
         </div>
