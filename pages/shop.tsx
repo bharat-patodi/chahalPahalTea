@@ -4,13 +4,19 @@ import styles from "../styles/Shop.module.css";
 import { useState, useRef } from "react";
 import { useCartContext } from "../context/XyzContext";
 
-const Shop = () => (
+const Shop = () => {
+  const [cart, setCart] = useCartContext();
+  return (
   <>
     <Header />
     <main className={styles.shopPage}>
       <div>
         <h1>Shop</h1>
       </div>
+      {/* <section>
+        Test Values:
+        {cart.adrakChai.gm250.quantity}
+      </section> */}
       <section className={styles.productDashboard}>
         <ProductCard id="premiumChai" />
         <ProductCard id="elaichiChai" />
@@ -20,7 +26,7 @@ const Shop = () => (
     </main>
     <Footer />
   </>
-);
+)};
 
 const ProductCard = (props: any) => {
   const [cart, setCart] = useCartContext();
@@ -32,7 +38,7 @@ const ProductCard = (props: any) => {
 
   const handleProductAddition = () => {
     const weight = weightRef.current?.value;
-    const quantity = quantityRef.current?.value;
+    const quantity = Number(quantityRef.current?.value);
     console.log(props.id);
     console.log(weight);
     setCart((prevCart: { [key: string]: any }) => {
@@ -41,13 +47,15 @@ const ProductCard = (props: any) => {
           ...prevCart,
           [currentChai]: {
             ...prevCart[currentChai],
-            [weight as keyof typeof prevCart[typeof currentChai]]: {
-              ...prevCart[currentChai].weight,
+            // [weight as keyof typeof prevCart[typeof currentChai]]: {
+            //   ...prevCart[currentChai].weight,
+            //   quantity,
+            // },
+            [weight as string]: {
+              ...prevCart[currentChai][weight as string],
               quantity,
-            },
-          },
-          weight,
-          quantity,
+            }
+          }
         };
       }
       return prevCart;
@@ -83,7 +91,6 @@ const ProductCard = (props: any) => {
               onChange={(e) => {
                 setCurrentWeight(e.target.value);
                 setCurrentChai(props.id);
-                console.log(props.id, currentChai);
               }}
             >
               <option value="gm250">250gm</option>
@@ -100,7 +107,6 @@ const ProductCard = (props: any) => {
               onChange={(e) => {
                 setCurrentQtty(e.target.value);
                 setCurrentChai(props.id);
-                console.log(props.id, currentChai);
               }}
             >
               <option value="1">1</option>
