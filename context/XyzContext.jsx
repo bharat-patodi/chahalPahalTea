@@ -49,7 +49,7 @@ export const TeaContextProvider = ({ children }) => {
         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
       shipping: 50,
       gm250: {
-        price: 250,
+        price: 125,
         quantity: 0,
       },
       gm500: {
