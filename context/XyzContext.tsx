@@ -110,7 +110,7 @@
 
 import { createContext, useContext, useState } from "react";
 
-interface CartItem {
+export interface CartItem {
   name: string;
   details: string;
   src: string;
