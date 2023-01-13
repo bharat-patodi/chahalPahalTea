@@ -16,7 +16,7 @@
 }
 
 .contactDetails {
-    background-color: #FFE533;
+    background-color: var(--animesh-choice-yellow);
     flex-grow: 1;
     padding-top: 20rem;
     padding-bottom: 20rem;
