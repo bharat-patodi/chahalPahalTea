@@ -3,7 +3,7 @@
     gap: 2rem; */
     /* border: 3px solid gray; */
     max-width: 1000px;
-    background-color: var(--animesh-choice-darkyellow);
+    background-color: var(--animesh-choice-yellow);
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     padding: 1rem;
     margin-bottom: 5rem;
