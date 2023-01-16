@@ -33,7 +33,7 @@
 //         quantity: 0,
 //       },
 //       gm500: {
-//         price: 230,
+//         price: 220,
 //         quantity: 0,
 //       },
 //       gm1000: {
@@ -67,7 +67,7 @@
 //         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
 //       shipping: 50,
 //       gm250: {
-//         price: 125,
+//         price: 120,
 //         quantity: 0,
 //       },
 //       gm500: {
@@ -86,15 +86,15 @@
 //         "Assam tea leaves. Strong aroma and taste. No artificial flavours. All natural ingredients.",
 //       shipping: 50,
 //       gm250: {
-//         price: 130,
+//         price: 140,
 //         quantity: 0,
 //       },
 //       gm500: {
-//         price: 250,
+//         price: 270,
 //         quantity: 0,
 //       },
 //       gm1000: {
-//         price: 490,
+//         price: 530,
 //         quantity: 0,
 //       },
 //     },
