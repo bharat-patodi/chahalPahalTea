@@ -1,32 +1,141 @@
-.cartDashboard {
-    /* display: flex;
+.cartDashboardSection {
+  /* display: flex;
     gap: 2rem; */
-    /* border: 3px solid gray; */
-    max-width: 1000px;
-    background-color: var(--animesh-choice-yellow);
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    padding: 1rem;
-    margin-bottom: 5rem;
-    font-weight: 700;
+  /* border: 3px solid gray; */
+  max-width: 1000px;
+  background-color: var(--animesh-choice-yellow);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  padding: 1rem;
+  margin: 0 auto 5rem auto;
+  font-weight: 700;
 }
 
 .cartCard {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .cartCardName {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  /* border: 3px solid hotpink; */
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .cartCardName * {
-    /* border: 3px solid hotpink; */
-    vertical-align: middle;
+  /* border: 3px solid hotpink; */
+  vertical-align: middle;
 }
 
-.customerDetails, .cart {
-    border: 3px solid;
+.customerDetails,
+.cart {
+  border: 3px solid;
+}
+
+/* Cart Customer Details Section */
+
+.cartCustomerDetailsSection {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  /* border: 3px solid; */
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  background-color: var(--animesh-choice-yellow);
+}
+
+/* Duplicate code */
+.contact {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.enquiryForm {
+  flex-grow: 1;
+  text-align: center;
+  /* background-image: url("/repeating-chevrons.svg"); */
+  /* background-attachment: fixed; */
+}
+
+.enquiryForm form {
+  display: inline-block;
+  margin: 1rem auto 2rem auto;
+  text-align: left;
+}
+
+.enquiryForm form *:not(:last-child):not(:first-child) {
+  width: 100%;
+}
+
+.enquiryForm input[type="submit"] {
+  background-color: var(--animesh-choice-green);
+  font-size: 1.08rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.enquiryForm input[type="submit"]:active {
+  /* border: none; */
+  background-color: var(--animesh-choice-black);
+  color: white;
+}
+
+/* For centering the form, use https://stackoverflow.com/questions/8097744/how-do-i-center-this-form-in-css */
+
+.enquiryForm select {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.enquiryForm input {
+  border-radius: 3px;
+  border: none;
+  padding: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: 0.25rem 0 1rem 0;
+}
+
+.enquiryForm input:not(input[type="submit"]):focus,
+.enquiryForm textarea:focus {
+  /* outline: none; */
+  outline: 3px solid var(--animesh-choice-green);
+}
+
+.enquiryForm textarea {
+  border-radius: 3px;
+  border: none;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: 0.25rem 0 1rem 0;
+  resize: none;
+}
+
+/* Payment Details Section */
+.paymentDetailsSection {
+  /* display: flex; */
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 1rem;
+  background-color: var(--animesh-choice-yellow);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+}
+
+.paymentDetails {
+    margin: 0 auto;
+    /* border: 3px solid; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.paymentDetailsImg {
+  width: 200px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px; */
 }
