@@ -60,21 +60,21 @@ const Header = () => {
       <nav className={`${styles.headerNav}`}>
         <ul className={styles.navHamburgerIcon}>
           <li>
-            <Link href="/">
+            <Link href="/cart">
               <a>
                 <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon>
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a>
+            {/* <Link href="/">
+              <a> */}
                 <FontAwesomeIcon
                   icon="bars"
                   onClick={handleHamburgerClick}
                 ></FontAwesomeIcon>
-              </a>
-            </Link>
+              {/* </a>
+            </Link> */}
           </li>
           {isOpen ? <HamburgerNavComponent /> : null}
         </ul>
