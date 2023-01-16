@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Cart.module.css";
+import { useState } from "react";
 import { CartItem, useCartContext } from "../context/XyzContext";
 // For toast
 import { supabase } from "../utils/supabaseClient";
@@ -10,12 +11,14 @@ import "react-toastify/dist/ReactToastify.css";
 const Cart = () => {
   // const [cart, setCart] = useCartContext();
   const [cart, setCart] = useCartContext();
+  const [total, setTotal] = useState(0);
+  let tempTotal = 0;
 
   console.log(cart);
-  let total =
-    cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
-    cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
-    cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity;
+  // let total =
+  //   cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
+  //   cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
+  //   cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity;
 
   const addLead = async (e: any) => {
     // let usertype = (document.querySelector("#usertype") as HTMLSelectElement)
@@ -53,7 +56,7 @@ const Cart = () => {
         <div>
           <h1>Cart</h1>
           <section className={styles.cartDashboardSection}>
-            <h3>ले लो भैया!</h3>
+            {/* <h3>ले लो भैया!</h3> */}
             <section className={styles.cartCard}>
               <p>Product</p>
               <p>Weight</p>
@@ -65,6 +68,10 @@ const Cart = () => {
                 let weights = ["gm250", "gm500", "gm1000"];
                 for (let i = 0; i < 3; i++) {
                   if (currChai.gm250.quantity > 0) {
+                    tempTotal += currChai.gm250.quantity * currChai.gm250.price;
+                    // setTotal(tempTotal);
+                    console.log({ tempTotal });
+                    // console.log({total});
                     return (
                       <>
                         <hr />
@@ -83,6 +90,7 @@ const Cart = () => {
                     );
                   }
                   if (currChai.gm500.quantity > 0) {
+                    tempTotal += currChai.gm250.quantity * currChai.gm250.price;
                     return (
                       <>
                         <hr />
@@ -101,6 +109,7 @@ const Cart = () => {
                     );
                   }
                   if (currChai.gm1000.quantity > 0) {
+                    tempTotal += currChai.gm250.quantity * currChai.gm250.price;
                     return (
                       <>
                         <hr />
@@ -120,70 +129,80 @@ const Cart = () => {
                     );
                   }
                 }
+                console.log({ tempTotal });
                 return "";
               }
             )}
+            {console.log({ hi: tempTotal })}
+            {/* {setTotal(tempTotal)} */}
             <section className={styles.cartCard}>
               <p>Total</p>
-              <p>INR {}</p>
+              <p>INR {total}</p>
             </section>
           </section>
           {/* Make a component out of this form. I've used it twice now.*/}
-          <section className={styles.cartCustomerDetailsSection}>
-            <div className={styles.contact}>
-              <section className={styles.enquiryForm}>
-                <h3>बता दो भैया</h3>
-                <form action="post" onSubmit={addLead}>
-                  <select name="" id="usertype">
-                    <option value="customer">Customer</option>
-                    <option value="distributor">Distributor</option>
-                  </select>
-                  <label>Name</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="name"
-                    placeholder="animesh jain"
-                    required
-                  />
-                  <label>Email</label>
-                  <input
-                    type="email"
-                    name=""
-                    id="email"
-                    placeholder="animesh@gmail.com"
-                    required
-                  />
-                  <label>Number</label>
-                  <input
-                    type="tel"
-                    name=""
-                    id="telephone"
-                    placeholder="9099090191"
-                    required
-                  />
-                  <label>Address</label>
-                  <textarea name="" id="message" cols={30} rows={10}></textarea>
-                  <input type="submit" value="Submit" />
-                </form>
-              </section>
-            </div>
-          </section>
-          <section className={styles.paymentDetailsSection}>
-            <h3>दे दो भैया!</h3>
-            <div className={styles.paymentDetails}>
-              <div className={styles.paymentDetailsInstruments}>
-                <p>Use the following UPI ID to make the payment: </p>
-                <p>animeshkjain-1@okicici</p>
+          <section className={styles.detailsSection}>
+            <section className={styles.cartCustomerDetailsSection}>
+              <div className={styles.contact}>
+                <section className={styles.enquiryForm}>
+                  <h3>कहाँ भेजें आपकी चाय? 🙏</h3>
+                  <form action="post" onSubmit={addLead}>
+                    <select name="" id="usertype">
+                      <option value="customer">Customer</option>
+                      <option value="distributor">Distributor</option>
+                    </select>
+                    <label>Name</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="name"
+                      placeholder="animesh jain"
+                      required
+                    />
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      name=""
+                      id="email"
+                      placeholder="animesh@gmail.com"
+                      required
+                    />
+                    <label>Number</label>
+                    <input
+                      type="tel"
+                      name=""
+                      id="telephone"
+                      placeholder="9099090191"
+                      required
+                    />
+                    <label>Address</label>
+                    <textarea
+                      name=""
+                      id="message"
+                      cols={30}
+                      rows={10}
+                    ></textarea>
+                    <input type="submit" value="Submit" />
+                  </form>
+                </section>
               </div>
-              <div className={styles.paymentDetailsInstruments}>
-                <p>OR scan this code to make the payment!</p>
-                <img
-                  src="payment-details-qr-code.png"
-                  className={styles.paymentDetailsImg}
-                />
+            </section>
+            <section className={styles.paymentDetailsSection}>
+              <h3>यहाँ पेमेंट करें</h3>
+              <div className={styles.paymentDetails}>
+                <div className={styles.paymentDetailsInstruments}>
+                  <p>Use the following UPI ID to make the payment: </p>
+                  <p>animeshkjain-1@okicici</p>
+                </div>
+                <div className={styles.paymentDetailsInstruments}>
+                  <p>OR scan this code to make the payment!</p>
+                  <img
+                    src="payment-details-qr-code.png"
+                    className={styles.paymentDetailsImg}
+                  />
+                </div>
               </div>
-            </div>
+            </section>
           </section>
         </div>
       </main>
