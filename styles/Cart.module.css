@@ -43,6 +43,7 @@
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   background-color: var(--animesh-choice-yellow);
   margin-bottom: 5rem;
+  flex-wrap: wrap;
 }
 
 
@@ -130,9 +131,6 @@
 
 /* Payment Details Section */
 
-
-
-
 .paymentDetailsSection {
   /* display: flex; */
   max-width: 1000px;
@@ -141,7 +139,6 @@
   /* background-color: var(--animesh-choice-yellow); */
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px; */
 }
-
 
 .paymentDetails {
     /* margin: 0 auto; */
