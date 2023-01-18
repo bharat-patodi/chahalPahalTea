@@ -11,10 +11,20 @@ import "react-toastify/dist/ReactToastify.css";
 const Cart = () => {
   // const [cart, setCart] = useCartContext();
   const [cart, setCart] = useCartContext();
-  const [total, setTotal] = useState(0);
-  let tempTotal = 0;
-
-  console.log(cart);
+  const [total, setTotal] =
+    useState(
+      cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
+      cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
+      cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity +
+      cart.premiumChai.gm1000.price * cart.premiumChai.gm1000.quantity +
+      cart.premiumChai.gm500.price * cart.premiumChai.gm500.quantity +
+      cart.premiumChai.gm250.price * cart.premiumChai.gm250.quantity +
+      cart.elaichiChai.gm1000.price * cart.elaichiChai.gm1000.quantity +
+      cart.elaichiChai.gm500.price * cart.elaichiChai.gm500.quantity +
+      cart.elaichiChai.gm250.price * cart.elaichiChai.gm250.quantity +
+      cart.masalaChai.gm1000.price * cart.masalaChai.gm1000.quantity +
+      cart.masalaChai.gm500.price * cart.masalaChai.gm500.quantity +
+      cart.masalaChai.gm250.price * cart.masalaChai.gm250.quantity);
   // let total =
   //   cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
   //   cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
@@ -67,10 +77,17 @@ const Cart = () => {
               (currChai: CartItem) => {
                 let weights = ["gm250", "gm500", "gm1000"];
                 for (let i = 0; i < 3; i++) {
+                  console.log(
+                    Number(currChai.gm250.quantity) > 0,
+                    currChai.gm250.quantity > 0,
+                    currChai.gm500.quantity > 0,
+                    currChai.gm1000.quantity > 0,
+                  );
                   if (currChai.gm250.quantity > 0) {
-                    tempTotal += currChai.gm250.quantity * currChai.gm250.price;
-                    // setTotal(tempTotal);
-                    console.log({ tempTotal });
+                    console.log("250boys");
+                    console.log(currChai.gm250.quantity * currChai.gm250.price);
+                    console.log(currChai.gm250.quantity);
+                    console.log(currChai.gm250.price);
                     // console.log({total});
                     return (
                       <>
@@ -90,7 +107,6 @@ const Cart = () => {
                     );
                   }
                   if (currChai.gm500.quantity > 0) {
-                    tempTotal += currChai.gm250.quantity * currChai.gm250.price;
                     return (
                       <>
                         <hr />
@@ -99,7 +115,7 @@ const Cart = () => {
                             <img src={currChai.src} width="100px" />
                             <p>{currChai.name}</p>
                           </div>
-                          <p>250 gm</p>
+                          <p>500 gm</p>
                           <p>{currChai.gm500.quantity}</p>
                           <p>
                             INR {currChai.gm500.price * currChai.gm500.quantity}
@@ -109,7 +125,6 @@ const Cart = () => {
                     );
                   }
                   if (currChai.gm1000.quantity > 0) {
-                    tempTotal += currChai.gm250.quantity * currChai.gm250.price;
                     return (
                       <>
                         <hr />
@@ -118,7 +133,7 @@ const Cart = () => {
                             <img src={currChai.src} width="100px" />
                             <p>{currChai.name}</p>
                           </div>
-                          <p>250 gm</p>
+                          <p>1kg</p>
                           <p>{currChai.gm1000.quantity}</p>
                           <p>
                             INR{" "}
@@ -129,15 +144,12 @@ const Cart = () => {
                     );
                   }
                 }
-                console.log({ tempTotal });
                 return "";
               }
             )}
-            {console.log({ hi: tempTotal })}
-            {/* {setTotal(tempTotal)} */}
             <section className={styles.cartCard}>
               <p>Total</p>
-              <p>INR {total}</p>
+              <p>INR {total || 0}</p>
             </section>
           </section>
           {/* Make a component out of this form. I've used it twice now.*/}
@@ -195,7 +207,8 @@ const Cart = () => {
                   <p>animeshkjain-1@okicici</p>
                 </div>
                 <div className={styles.paymentDetailsInstruments}>
-                  <p>OR scan this code to make the payment!</p>
+                  <p>OR </p>
+                  <p>Scan this code to make the payment!</p>
                   <img
                     src="payment-details-qr-code.png"
                     className={styles.paymentDetailsImg}
