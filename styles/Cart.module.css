@@ -129,6 +129,10 @@
 }
 
 /* Payment Details Section */
+
+
+
+
 .paymentDetailsSection {
   /* display: flex; */
   max-width: 1000px;
@@ -138,6 +142,7 @@
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px; */
 }
 
+
 .paymentDetails {
     /* margin: 0 auto; */
     /* border: 3px solid; */
@@ -146,6 +151,14 @@
     align-items: center; */
 }
 .paymentDetailsImg {
-  width: 200px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px; */
+}
+
+.orText {
+  text-align: center;
+  margin: 1rem 0;
+  /* border: 3px solid; */
 }

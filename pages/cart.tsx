@@ -200,19 +200,21 @@ const Cart = () => {
               </div>
             </section>
             <section className={styles.paymentDetailsSection}>
-              <h3>यहाँ पेमेंट करें</h3>
+              <h3 className={styles.paymentHeading}>यहाँ पेमेंट करें</h3>
               <div className={styles.paymentDetails}>
                 <div className={styles.paymentDetailsInstruments}>
                   <p>Use the following UPI ID to make the payment: </p>
                   <p>animeshkjain-1@okicici</p>
                 </div>
                 <div className={styles.paymentDetailsInstruments}>
-                  <p>OR </p>
+                  <p className={styles.orText}>OR </p>
                   <p>Scan this code to make the payment!</p>
                   <img
                     src="payment-details-qr-code.png"
                     className={styles.paymentDetailsImg}
-                  />
+                    />
+                  <p className={styles.orText}>OR </p>
+                    <p>PhonePe/GPay/PayTM: 90990-90191</p>
                 </div>
               </div>
             </section>
