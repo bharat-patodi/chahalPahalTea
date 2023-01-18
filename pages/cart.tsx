@@ -81,7 +81,7 @@ const Cart = () => {
                     Number(currChai.gm250.quantity) > 0,
                     currChai.gm250.quantity > 0,
                     currChai.gm500.quantity > 0,
-                    currChai.gm1000.quantity > 0,
+                    currChai.gm1000.quantity > 0
                   );
                   if (currChai.gm250.quantity > 0) {
                     console.log("250boys");
@@ -94,7 +94,10 @@ const Cart = () => {
                         <hr />
                         <section className={styles.cartCard}>
                           <div className={styles.cartCardName}>
-                            <img src={currChai.src} width="100px" />
+                            <img
+                              src={currChai.src}
+                              className={styles.cartCardImage}
+                            />
                             <p>{currChai.name}</p>
                           </div>
                           <p>250 gm</p>
@@ -212,9 +215,17 @@ const Cart = () => {
                   <img
                     src="payment-details-qr-code.png"
                     className={styles.paymentDetailsImg}
-                    />
+                  />
                   <p className={styles.orText}>OR </p>
-                    <p>PhonePe/GPay/PayTM: 90990-90191</p>
+                  <p>PhonePe/GPay/PayTM: 90990-90191</p>
+                  <p className={styles.noteText}>
+                    <span className="boldText">Note:</span> After making payment kindly share screenshot at{" "}
+                    <a href="https://wa.me/9099090191">
+                       https://wa.me/9099090191
+                    </a>
+                    . We will share you the order confirmation as soon as
+                    possible.
+                  </p>
                 </div>
               </div>
             </section>

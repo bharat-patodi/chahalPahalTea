@@ -280,6 +280,11 @@ Modular Classes
   font-family: 'Poppins', sans-serif;
 }
 
+.boldText {
+  font-weight: 700;
+  
+}
+
 /* ---------------------------------------------------------------
 Project Specific Styles
 --------------------------------------------------------------- */

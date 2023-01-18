@@ -1,6 +1,6 @@
 .cartDashboardSection {
   /* display: flex;
-    gap: 2rem; */
+  gap: 2rem; */
   /* border: 3px solid gray; */
   max-width: 1000px;
   background-color: var(--animesh-choice-yellow);
@@ -31,6 +31,11 @@
   vertical-align: middle;
 }
 
+.cartCardImage {
+  width: 300px;
+  border: 3px solid tomato;
+}
+
 .customerDetails,
 .cart {
   border: 3px solid;
@@ -40,7 +45,7 @@
 
 .detailsSection {
     display: flex;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   background-color: var(--animesh-choice-yellow);
   margin-bottom: 5rem;
   flex-wrap: wrap;
@@ -66,6 +71,7 @@
 }
 
 .enquiryForm {
+  max-width: 500px;
   flex-grow: 1;
   text-align: center;
   /* background-image: url("/repeating-chevrons.svg"); */
@@ -133,7 +139,8 @@
 
 .paymentDetailsSection {
   /* display: flex; */
-  max-width: 1000px;
+  max-width: 500px;
+  flex-grow: 1;
   margin: 5rem auto;
   padding: 1rem;
   /* background-color: var(--animesh-choice-yellow); */
@@ -158,4 +165,14 @@
   text-align: center;
   margin: 1rem 0;
   /* border: 3px solid; */
+}
+
+.noteText {
+  background-color: var(--animesh-choice-darkyellow);
+  color: var(--animesh-choice-black);
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+
 }
