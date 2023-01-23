@@ -4,6 +4,9 @@ import styles from "../styles/Cart.module.css";
 import { useState } from "react";
 import { CartItem, useCartContext } from "../context/XyzContext";
 
+// FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // For toast
 import { supabase } from "../utils/supabaseClient";
 import { ToastContainer, toast } from "react-toastify";
@@ -98,10 +101,17 @@ const Cart = () => {
                             <p>{currChai.name}</p>
                           </div>
                           <p>250 gm</p>
-                          <p>{currChai.gm250.quantity}</p>
+                          <p className={styles.cartCardQtty}>
+                            <button>+</button>
+                            <p>{currChai.gm250.quantity}</p>
+                            <button>-</button>
+                          </p>
                           <p>
                             INR {currChai.gm250.price * currChai.gm250.quantity}
                           </p>
+                          <button>
+                            <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
+                          </button>
                         </section>
                       </>
                     );

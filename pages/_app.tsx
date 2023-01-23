@@ -12,10 +12,10 @@ config.autoAddCss = false;
 
 // Testing putting this code from index.tsx here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart, faBars, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(fab, faShoppingCart, faBars);
+library.add(fab, faShoppingCart, faBars, faTrash);
 
 
 // Testing putting this code from index.tsx here

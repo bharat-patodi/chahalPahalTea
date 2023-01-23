@@ -9,6 +9,11 @@
 - Form submission should necessarily have the customer or distributor value
 - Box shadow value should be consistent across the website
 
+<!-- TODO: Product Deletion/Addition from cart -->
+<!-- TODO: Notification for addition of product -->
+<!-- TODO: Cart styling misalignment -->
+<!-- TODO: localhost integration -->
+<!-- TODO:  -->
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

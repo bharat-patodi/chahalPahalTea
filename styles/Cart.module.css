@@ -36,6 +36,11 @@
   /* border: 3px solid tomato; */
 }
 
+.cartCardQtty {
+  display: flex;
+  gap: 1rem;
+}
+
 .customerDetails,
 .cart {
   border: 3px solid;
