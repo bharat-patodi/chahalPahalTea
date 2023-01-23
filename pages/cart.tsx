@@ -12,6 +12,10 @@ import { supabase } from "../utils/supabaseClient";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
+
+
 const Cart = () => {
   // const [cart, setCart] = useCartContext();
   const [cart, setCart] = useCartContext();
@@ -29,6 +33,24 @@ const Cart = () => {
       cart.masalaChai.gm1000.price * cart.masalaChai.gm1000.quantity +
       cart.masalaChai.gm500.price * cart.masalaChai.gm500.quantity +
       cart.masalaChai.gm250.price * cart.masalaChai.gm250.quantity);
+
+    const handleQttyUpdate = (action: string) => {
+      // Create a global function that allows me to update
+      // cart values.
+
+      if (action === "+") {
+        console.log("Added");
+        // setQuantity(quantity + 1);
+      } else if (action === "-") {
+        console.log("Removed");
+        // setQuantity(quantity - 1);
+      } else if (action === "trash") {
+        console.log("Deleted");
+        // setQuantity(0);
+      }
+    };
+
+
 
   const addLead = async (e: any) => {
     let usertype = (document.querySelector("#usertype") as HTMLSelectElement)
@@ -88,7 +110,6 @@ const Cart = () => {
                     console.log(currChai.gm250.quantity * currChai.gm250.price);
                     console.log(currChai.gm250.quantity);
                     console.log(currChai.gm250.price);
-                    // console.log({total});
                     return (
                       <>
                         <hr />
@@ -102,14 +123,14 @@ const Cart = () => {
                           </div>
                           <p>250 gm</p>
                           <p className={styles.cartCardQtty}>
-                            <button>+</button>
+                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("+")}}>+</button>
                             <p>{currChai.gm250.quantity}</p>
-                            <button>-</button>
+                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("-")}}>-</button>
                           </p>
                           <p>
                             INR {currChai.gm250.price * currChai.gm250.quantity}
                           </p>
-                          <button>
+                          <button className="defaultBtn" onClick={() => {handleQttyUpdate("trash")}}>
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
                           </button>
                         </section>
@@ -129,10 +150,17 @@ const Cart = () => {
                             <p>{currChai.name}</p>
                           </div>
                           <p>500 gm</p>
-                          <p>{currChai.gm500.quantity}</p>
-                          <p>
-                            INR {currChai.gm500.price * currChai.gm500.quantity}
+                         <p className={styles.cartCardQtty}>
+                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("+")}}>+</button>
+                            <p>{currChai.gm250.quantity}</p>
+                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("-")}}>-</button>
                           </p>
+                          <p>
+                            INR {currChai.gm250.price * currChai.gm250.quantity}
+                          </p>
+                          <button className="defaultBtn" onClick={() => {handleQttyUpdate("trash")}}>
+                            <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
+                          </button>
                         </section>
                       </>
                     );
@@ -150,11 +178,36 @@ const Cart = () => {
                             <p>{currChai.name}</p>
                           </div>
                           <p>1kg</p>
-                          <p>{currChai.gm1000.quantity}</p>
-                          <p>
-                            INR{" "}
-                            {currChai.gm1000.price * currChai.gm1000.quantity}
+                          <p className={styles.cartCardQtty}>
+                            <button
+                              className="defaultBtn"
+                              onClick={() => {
+                                handleQttyUpdate("+");
+                              }}
+                            >
+                              +
+                            </button>
+                            <p>{currChai.gm250.quantity}</p>
+                            <button
+                              className="defaultBtn"
+                              onClick={() => {
+                                handleQttyUpdate("-");
+                              }}
+                            >
+                              -
+                            </button>
                           </p>
+                          <p>
+                            INR {currChai.gm250.price * currChai.gm250.quantity}
+                          </p>
+                          <button
+                            className="defaultBtn"
+                            onClick={() => {
+                              handleQttyUpdate("trash");
+                            }}
+                          >
+                            <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
+                          </button>
                         </section>
                       </>
                     );
@@ -163,6 +216,7 @@ const Cart = () => {
                 return "";
               }
             )}
+              <hr />
             <section className={styles.cartCard}>
               <p>Total</p>
               <p>INR {total || 0}</p>

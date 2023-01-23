@@ -117,7 +117,7 @@ const ProductCard = (props: any) => {
           </label>
           <button
             type="button"
-            className={styles.productPurchaseBtn}
+            className="defaultBtn"
             onClick={handleProductAddition}
           >Add to Cart</button>
         </form>
