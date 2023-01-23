@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import styles from "../styles/Cart.module.css";
 import { useState } from "react";
 import { CartItem, useCartContext } from "../context/XyzContext";
+
 // For toast
 import { supabase } from "../utils/supabaseClient";
 import { ToastContainer, toast } from "react-toastify";
@@ -25,39 +26,35 @@ const Cart = () => {
       cart.masalaChai.gm1000.price * cart.masalaChai.gm1000.quantity +
       cart.masalaChai.gm500.price * cart.masalaChai.gm500.quantity +
       cart.masalaChai.gm250.price * cart.masalaChai.gm250.quantity);
-  // let total =
-  //   cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
-  //   cart.adrakChai.gm500.price * cart.adrakChai.gm500.quantity +
-  //   cart.adrakChai.gm250.price * cart.adrakChai.gm250.quantity;
 
   const addLead = async (e: any) => {
-    // let usertype = (document.querySelector("#usertype") as HTMLSelectElement)
-    //   ?.value;
-    // let name = (document.querySelector("#name") as HTMLInputElement)?.value;
-    // let email = (document.querySelector("#email") as HTMLInputElement)?.value;
-    // let telephone = Number(
-    //   (document.querySelector("#telephone") as HTMLInputElement)?.value
-    // );
-    // let message = (document.querySelector("#message") as HTMLInputElement)
-    //   ?.value;
-    // e.preventDefault();
-    // let response = await supabase.from("Leads").insert({
-    //   usertype: usertype,
-    //   name: name,
-    //   email: email,
-    //   number: telephone,
-    //   message: message,
-    // });
-    // console.log(response);
-    // // Console log the response from server
-    // if (response.status === 201) {
-    //   console.log("Data added");
-    //   console.log(response);
-    //   toast.success(" \u{1F44D} Thank You for your enquiry", {
-    //     position: toast.POSITION.TOP_CENTER,
-    //   });
-    // }
-    // e.target.reset();
+    let usertype = (document.querySelector("#usertype") as HTMLSelectElement)
+      ?.value;
+    let name = (document.querySelector("#name") as HTMLInputElement)?.value;
+    let email = (document.querySelector("#email") as HTMLInputElement)?.value;
+    let telephone = Number(
+      (document.querySelector("#telephone") as HTMLInputElement)?.value
+    );
+    let message = (document.querySelector("#message") as HTMLInputElement)
+      ?.value;
+    e.preventDefault();
+    let response = await supabase.from("Leads").insert({
+      usertype: usertype,
+      name: name,
+      email: email,
+      number: telephone,
+      message: message,
+    });
+    console.log(response);
+    // Console log the response from server
+    if (response.status === 201) {
+      console.log("Data added");
+      console.log(response);
+      toast.success(" \u{1F44D} Thank You for choosing Chahal Pahal Tea.", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+    e.target.reset();
   };
   return (
     <div className="superContainer">
@@ -115,7 +112,10 @@ const Cart = () => {
                         <hr />
                         <section className={styles.cartCard}>
                           <div className={styles.cartCardName}>
-                            <img src={currChai.src} width="100px" />
+                            <img
+                              src={currChai.src}
+                              className={styles.cartCardImage}
+                            />
                             <p>{currChai.name}</p>
                           </div>
                           <p>500 gm</p>
@@ -133,7 +133,10 @@ const Cart = () => {
                         <hr />
                         <section className={styles.cartCard}>
                           <div className={styles.cartCardName}>
-                            <img src={currChai.src} width="100px" />
+                            <img
+                              src={currChai.src}
+                              className={styles.cartCardImage}
+                            />
                             <p>{currChai.name}</p>
                           </div>
                           <p>1kg</p>
