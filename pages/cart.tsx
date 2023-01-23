@@ -152,11 +152,11 @@ const Cart = () => {
                           <p>500 gm</p>
                          <p className={styles.cartCardQtty}>
                             <button className="defaultBtn" onClick={() => {handleQttyUpdate("+")}}>+</button>
-                            <p>{currChai.gm250.quantity}</p>
+                            <p>{currChai.gm500.quantity}</p>
                             <button className="defaultBtn" onClick={() => {handleQttyUpdate("-")}}>-</button>
                           </p>
                           <p>
-                            INR {currChai.gm250.price * currChai.gm250.quantity}
+                            INR {currChai.gm500.price * currChai.gm500.quantity}
                           </p>
                           <button className="defaultBtn" onClick={() => {handleQttyUpdate("trash")}}>
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
@@ -187,7 +187,7 @@ const Cart = () => {
                             >
                               +
                             </button>
-                            <p>{currChai.gm250.quantity}</p>
+                            <p>{currChai.gm1000.quantity}</p>
                             <button
                               className="defaultBtn"
                               onClick={() => {
@@ -198,7 +198,7 @@ const Cart = () => {
                             </button>
                           </p>
                           <p>
-                            INR {currChai.gm250.price * currChai.gm250.quantity}
+                            INR {currChai.gm1000.price * currChai.gm1000.quantity}
                           </p>
                           <button
                             className="defaultBtn"
