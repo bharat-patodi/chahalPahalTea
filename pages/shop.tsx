@@ -13,10 +13,6 @@ const Shop = () => {
       <div>
         <h1>Shop</h1>
       </div>
-      {/* <section>
-        Test Values:
-        {cart.adrakChai.gm250.quantity}
-      </section> */}
       <section className={styles.productDashboard}>
         <ProductCard id="premiumChai" />
         <ProductCard id="elaichiChai" />
@@ -60,7 +56,6 @@ const ProductCard = (props: any) => {
       }
       return prevCart;
     });
-
     console.log(weight, quantity);
     console.log("Product Added");
     console.log(cart);

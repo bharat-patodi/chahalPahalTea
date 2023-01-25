@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Cart.module.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { CartItem, useCartContext } from "../context/XyzContext";
 
 // FontAwesome
@@ -12,6 +12,8 @@ import { supabase } from "../utils/supabaseClient";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Useref
+
 
 
 
@@ -19,6 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Cart = () => {
   // const [cart, setCart] = useCartContext();
   const [cart, setCart] = useCartContext();
+  const [currentChai, setCurrentChai] = useState("adrakChai");
   const [total, setTotal] =
     useState(
       cart.adrakChai.gm1000.price * cart.adrakChai.gm1000.quantity +
@@ -34,19 +37,29 @@ const Cart = () => {
       cart.masalaChai.gm500.price * cart.masalaChai.gm500.quantity +
       cart.masalaChai.gm250.price * cart.masalaChai.gm250.quantity);
 
-    const handleQttyUpdate = (action: string) => {
+  const weightRef = useRef<HTMLButtonElement>(null);
+  const quantityRef = useRef<HTMLButtonElement>(null);
+
+    const handleDetailsUpdate = (action: string) => {
       // Create a global function that allows me to update
       // cart values.
+      // setCurrentChai();
+      const weight = weightRef.current?.value;
+      const quantity = quantityRef.current?.value;
+      
+      console.log("weight: ", weight, quantity);
+      console.log("weightRef: ", weightRef);
+      console.log("quantityRef: ", quantityRef);
 
       if (action === "+") {
         console.log("Added");
-        // setQuantity(quantity + 1);
+        console.log(cart);
       } else if (action === "-") {
         console.log("Removed");
-        // setQuantity(quantity - 1);
+        console.log(cart);
       } else if (action === "trash") {
         console.log("Deleted");
-        // setQuantity(0);
+        console.log(cart);
       }
     };
 
@@ -123,14 +136,14 @@ const Cart = () => {
                           </div>
                           <p>250 gm</p>
                           <p className={styles.cartCardQtty}>
-                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("+")}}>+</button>
+                            <button ref={quantityRef} className="defaultBtn" onClick={() => {handleDetailsUpdate("+")}}>+</button>
                             <p>{currChai.gm250.quantity}</p>
-                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("-")}}>-</button>
+                            <button ref={quantityRef} className="defaultBtn" onClick={() => {handleDetailsUpdate("-")}}>-</button>
                           </p>
                           <p>
                             INR {currChai.gm250.price * currChai.gm250.quantity}
                           </p>
-                          <button className="defaultBtn" onClick={() => {handleQttyUpdate("trash")}}>
+                          <button ref={quantityRef} className="defaultBtn" onClick={() => {handleDetailsUpdate("trash")}}>
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
                           </button>
                         </section>
@@ -151,14 +164,14 @@ const Cart = () => {
                           </div>
                           <p>500 gm</p>
                          <p className={styles.cartCardQtty}>
-                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("+")}}>+</button>
+                            <button className="defaultBtn" onClick={() => {handleDetailsUpdate("+")}}>+</button>
                             <p>{currChai.gm500.quantity}</p>
-                            <button className="defaultBtn" onClick={() => {handleQttyUpdate("-")}}>-</button>
+                            <button className="defaultBtn" onClick={() => {handleDetailsUpdate("-")}}>-</button>
                           </p>
                           <p>
                             INR {currChai.gm500.price * currChai.gm500.quantity}
                           </p>
-                          <button className="defaultBtn" onClick={() => {handleQttyUpdate("trash")}}>
+                          <button className="defaultBtn" onClick={() => {handleDetailsUpdate("trash")}}>
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
                           </button>
                         </section>
@@ -182,7 +195,7 @@ const Cart = () => {
                             <button
                               className="defaultBtn"
                               onClick={() => {
-                                handleQttyUpdate("+");
+                                handleDetailsUpdate("+");
                               }}
                             >
                               +
@@ -191,7 +204,7 @@ const Cart = () => {
                             <button
                               className="defaultBtn"
                               onClick={() => {
-                                handleQttyUpdate("-");
+                                handleDetailsUpdate("-");
                               }}
                             >
                               -
@@ -203,7 +216,7 @@ const Cart = () => {
                           <button
                             className="defaultBtn"
                             onClick={() => {
-                              handleQttyUpdate("trash");
+                              handleDetailsUpdate("trash");
                             }}
                           >
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
