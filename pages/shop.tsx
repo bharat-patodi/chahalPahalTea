@@ -110,6 +110,7 @@ const ProductCard = (props: any) => {
               <option value="4">4</option>
             </select>
           </label>
+              <br />
           <button
             type="button"
             className="defaultBtn"
