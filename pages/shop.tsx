@@ -35,6 +35,7 @@ const ProductCard = (props: any) => {
   const handleProductAddition = () => {
     const weight = weightRef.current?.value;
     const quantity = Number(quantityRef.current?.value);
+    console.log({weightRef});
     console.log(props.id);
     console.log(weight);
     setCart((prevCart: { [key: string]: any }) => {

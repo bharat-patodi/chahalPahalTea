@@ -38,32 +38,69 @@ const Cart = () => {
       cart.masalaChai.gm250.price * cart.masalaChai.gm250.quantity);
 
   const weightRef = useRef<HTMLButtonElement>(null);
-  const quantityRef = useRef<HTMLButtonElement>(null);
+  const increaseQuantityRef = useRef<HTMLButtonElement>(null);
+  // const decreaseQuantityRef = useRef<HTMLButtonElement>(null);
+  // const deleteQuantityRef = useRef<HTMLButtonElement>(null);
 
-    const handleDetailsUpdate = (action: string) => {
-      // Create a global function that allows me to update
-      // cart values.
-      // setCurrentChai();
-      const weight = weightRef.current?.value;
-      const quantity = quantityRef.current?.value;
-      
-      console.log("weight: ", weight, quantity);
-      console.log("weightRef: ", weightRef);
-      console.log("quantityRef: ", quantityRef);
+  const handleDetailsUpdate = (action: string) => {
+    // Create a global function that allows me to update
+    // cart values.
+    // setCurrentChai();
+    const weight = weightRef.current;
+    const increaseQuantity = increaseQuantityRef.current;
+    // const decreaseQuantity = decreaseQuantityRef.current?.value;
+    // const deleteQuantity = deleteQuantityRef.current?.value;
 
-      if (action === "+") {
-        console.log("Added");
-        console.log(cart);
-      } else if (action === "-") {
-        console.log("Removed");
-        console.log(cart);
-      } else if (action === "trash") {
-        console.log("Deleted");
-        console.log(cart);
+    // console.log("weightRef: ", weightRef);
+    // console.log(increaseQuantity, increaseQuantityRef);
+    const increaseQttyRefID = increaseQuantity?.parentElement?.parentElement?.id;
+    console.log(increaseQttyRefID);
+    for (let chai in cart) {
+      console.log(chai);
+      if(chai === increaseQttyRefID) {
+        console.log(increaseQttyRefID, "match");
+    setCart((prevCart: { [key: string]: any }) => {
+      if (prevCart && prevCart[currentChai]) {
+        return {
+          ...prevCart,
+          [currentChai]: {
+            ...prevCart[currentChai],
+            // [weight as keyof typeof prevCart[typeof currentChai]]: {
+            //   ...prevCart[currentChai].weight,
+            //   quantity,
+            // },
+            [quantity as string]: {
+              ...prevCart[currentChai][weight as string],
+            },
+          },
+        };
       }
-    };
+      return prevCart;
+    });
+      }
+      // if(chai.name === increaseQttyRefID) {
+
+      // }
+    }
 
 
+
+
+// console.log("decreaseQuantityRef: ", decreaseQuantityRef);
+    // console.log("deleteQuantityRef: ", deleteQuantityRef);
+
+    if (action === "+") {
+      console.log("Added");
+      console.log(cart);
+      console.log("Currently, only addition gives us the correct refs. Now we need to make the addition work and then port the same to deletion and subtraction.")
+    } else if (action === "-") {
+      console.log("Removed");
+      console.log(cart);
+    } else if (action === "trash") {
+      console.log("Deleted");
+      console.log(cart);
+    }
+  };
 
   const addLead = async (e: any) => {
     let usertype = (document.querySelector("#usertype") as HTMLSelectElement)
@@ -94,6 +131,7 @@ const Cart = () => {
     }
     e.target.reset();
   };
+
   return (
     <div className="superContainer">
       <Header />
@@ -101,7 +139,6 @@ const Cart = () => {
         <div>
           <h1>Cart</h1>
           <section className={styles.cartDashboardSection}>
-            {/* <h3>ले लो भैया!</h3> */}
             <section className={styles.cartCard}>
               <p>Product</p>
               <p>Weight</p>
@@ -126,7 +163,10 @@ const Cart = () => {
                     return (
                       <>
                         <hr />
-                        <section className={styles.cartCard}>
+                        <section
+                          id={`${currChai.name[0].toLowerCase() + currChai.name.substr(1).replace(/\s/g, "").replace("Tea", "Chai")}`}
+                          className={styles.cartCard}
+                        >
                           <div className={styles.cartCardName}>
                             <img
                               src={currChai.src}
@@ -136,14 +176,36 @@ const Cart = () => {
                           </div>
                           <p>250 gm</p>
                           <p className={styles.cartCardQtty}>
-                            <button ref={quantityRef} className="defaultBtn" onClick={() => {handleDetailsUpdate("+")}}>+</button>
+                            <button
+                              ref={increaseQuantityRef}
+                              className="defaultBtn"
+                              onClick={() => {
+                                handleDetailsUpdate("+");
+                              }}
+                            >
+                              +
+                            </button>
                             <p>{currChai.gm250.quantity}</p>
-                            <button ref={quantityRef} className="defaultBtn" onClick={() => {handleDetailsUpdate("-")}}>-</button>
+                            <button
+                              // ref={decreaseQuantityRef}
+                              className="defaultBtn"
+                              onClick={() => {
+                                handleDetailsUpdate("-");
+                              }}
+                            >
+                              -
+                            </button>
                           </p>
                           <p>
                             INR {currChai.gm250.price * currChai.gm250.quantity}
                           </p>
-                          <button ref={quantityRef} className="defaultBtn" onClick={() => {handleDetailsUpdate("trash")}}>
+                          <button
+                            // ref={deleteQuantityRef}
+                            className="defaultBtn"
+                            onClick={() => {
+                              handleDetailsUpdate("trash");
+                            }}
+                          >
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
                           </button>
                         </section>
@@ -154,7 +216,10 @@ const Cart = () => {
                     return (
                       <>
                         <hr />
-                        <section className={styles.cartCard}>
+                        <section
+                          className={styles.cartCard}
+                          id={`${currChai.name.replace(/\s/g, "")}-card`}
+                        >
                           <div className={styles.cartCardName}>
                             <img
                               src={currChai.src}
@@ -163,15 +228,35 @@ const Cart = () => {
                             <p>{currChai.name}</p>
                           </div>
                           <p>500 gm</p>
-                         <p className={styles.cartCardQtty}>
-                            <button className="defaultBtn" onClick={() => {handleDetailsUpdate("+")}}>+</button>
+                          <p className={styles.cartCardQtty}>
+                            <button
+                              ref={increaseQuantityRef}
+                              className="defaultBtn"
+                              onClick={() => {
+                                handleDetailsUpdate("+");
+                              }}
+                            >
+                              +
+                            </button>
                             <p>{currChai.gm500.quantity}</p>
-                            <button className="defaultBtn" onClick={() => {handleDetailsUpdate("-")}}>-</button>
+                            <button
+                              className="defaultBtn"
+                              onClick={() => {
+                                handleDetailsUpdate("-");
+                              }}
+                            >
+                              -
+                            </button>
                           </p>
                           <p>
                             INR {currChai.gm500.price * currChai.gm500.quantity}
                           </p>
-                          <button className="defaultBtn" onClick={() => {handleDetailsUpdate("trash")}}>
+                          <button
+                            className="defaultBtn"
+                            onClick={() => {
+                              handleDetailsUpdate("trash");
+                            }}
+                          >
                             <FontAwesomeIcon icon="trash"></FontAwesomeIcon>
                           </button>
                         </section>
@@ -182,7 +267,10 @@ const Cart = () => {
                     return (
                       <>
                         <hr />
-                        <section className={styles.cartCard}>
+                        <section
+                          id={`${currChai.name.replace(/\s/g, "")}-card`}
+                          className={styles.cartCard}
+                        >
                           <div className={styles.cartCardName}>
                             <img
                               src={currChai.src}
@@ -193,6 +281,7 @@ const Cart = () => {
                           <p>1kg</p>
                           <p className={styles.cartCardQtty}>
                             <button
+                              ref={increaseQuantityRef}
                               className="defaultBtn"
                               onClick={() => {
                                 handleDetailsUpdate("+");
@@ -211,7 +300,8 @@ const Cart = () => {
                             </button>
                           </p>
                           <p>
-                            INR {currChai.gm1000.price * currChai.gm1000.quantity}
+                            INR{" "}
+                            {currChai.gm1000.price * currChai.gm1000.quantity}
                           </p>
                           <button
                             className="defaultBtn"
