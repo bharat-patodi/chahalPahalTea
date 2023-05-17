@@ -1,0 +1,42 @@
+# For more information: https://github.com/Huachao/vscode-restclient
+
+# Currently, I don't know how to test all endpoints at once. So, I am testing them one by one.
+
+GET www.chahalpahaltea.com HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/about HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/cart HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/checkout HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/contact HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/credits HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/delivery HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/login HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/privacy HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/returns HTTP/1.1
+
+###
+
+GET www.chahalpahaltea.com/shop HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/terms HTTP/1.1
+
+###
+GET www.chahalpahaltea.com/testimonials HTTP/1.1
