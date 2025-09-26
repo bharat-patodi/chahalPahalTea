@@ -3,17 +3,22 @@ import Footer from "../components/Footer";
 import styles from "../styles/Shop.module.css";
 import { useState, useRef } from "react";
 import { useCartContext } from "../context/XyzContext";
+import { useTempContext } from "../context/TempContext";
 
 const Shop = () => {
   const [cart, setCart] = useCartContext();
+  const [cartColor, setCartColor] = useTempContext();
+
   return (
-  <>
-    <Header />
+    <>
+    <Header cartColor={cartColor} />
     <main className={styles.shopPage}>
       <div>
         <h1>Shop</h1>
       </div>
       <section className={styles.productDashboard}>
+        {/* TODO: Get the id also from the data */}
+        <ProductCard id="comboChai" />
         <ProductCard id="premiumChai" />
         <ProductCard id="elaichiChai" />
         <ProductCard id="adrakChai" />
@@ -35,31 +40,46 @@ const ProductCard = (props: any) => {
   const handleProductAddition = () => {
     const weight = weightRef.current?.value;
     const quantity = Number(quantityRef.current?.value);
-    console.log({weightRef});
-    console.log(props.id);
-    console.log(weight);
+    // This is the working version of setCart
+
+    // setCart((prevCart: { [key: string]: any }) => {
+    //   console.log(prevCart);
+    //   console.log(prevCart[currentChai]);
+    //   if (prevCart && prevCart[currentChai]) {
+    //     return {
+    //       ...prevCart,
+    //       [currentChai]: {
+    //         ...prevCart[currentChai],
+    //         [weight as string]: {
+    //           ...prevCart[currentChai][weight as string],
+    //           quantity,
+    //         }
+    //       }
+    //     };
+    //   }
+    //   return prevCart;
+    // });
+
+    // This is the trial version of setCart
+
     setCart((prevCart: { [key: string]: any }) => {
-      if (prevCart && prevCart[currentChai]) {
-        return {
-          ...prevCart,
-          [currentChai]: {
-            ...prevCart[currentChai],
-            // [weight as keyof typeof prevCart[typeof currentChai]]: {
-            //   ...prevCart[currentChai].weight,
-            //   quantity,
-            // },
-            [weight as string]: {
-              ...prevCart[currentChai][weight as string],
-              quantity,
-            }
+      console.log(currentChai, weight, quantity);
+      return {
+        ...prevCart,
+        [currentChai]: {
+          ...prevCart[currentChai],
+          [weight as string]: {
+            ...prevCart[currentChai][weight as string],
+            quantity,
           }
-        };
-      }
-      return prevCart;
+        }
+      };
     });
-    console.log(weight, quantity);
-    console.log("Product Added");
     console.log(cart);
+
+    // Cart icon changes
+    // setCartColor("red");
+
   };
 
   return (

@@ -2,8 +2,9 @@ import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import Badge from "./Badge";
 
-const Header = () => {
+const Header = ({ cartColor = ""}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleHamburgerClick = (e: any) => {
@@ -46,7 +47,8 @@ const Header = () => {
           <li>
             <Link href="/cart">
               <a>
-                <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon>
+                <Badge cartColor={cartColor}/>
+                {/* <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon> */}
               </a>
             </Link>
           </li>
